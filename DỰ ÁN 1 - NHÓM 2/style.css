@@ -99,7 +99,11 @@ button {
   .left-boxes, .right-boxes {
     display: flex;
     flex-direction: column;
-    margin-top: -40px;
+    margin-top: -20px;
+    
+  }
+  .left-boxes{
+    margin-left: -60px;
   }
   
   .box {
@@ -166,7 +170,7 @@ button {
     color: red;
 }
 .list-group{
-    margin-left: 100px;
+    margin-left: 34px;
     text-align: center;    
 }
 .list-group:hover{
@@ -176,9 +180,60 @@ button {
     margin-top: -40px;
 }
 .top-content{
-    margin-left: 50px;
-    width: 90%;
+    margin-left: px;
+    width: 70%;
     margin-top: -20px;
 }
+.row.sp {
+    display: flex;
+    margin: 5px;
+    gap: 10px;
+    margin-left: 100px;
+}
+
+.boxsp {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-left:  20px;
+}
+.boxsp img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.5s;
+}
+
+.boxsp p,
+.boxsp a {
+    text-align: center;
+    
+}
+
+.boxsp:hover {
+    transform: translateY(-5px);
+    
+}
+
+.boxsp:hover img {
+    
+}
+.thanhg{
+    
+    width: 100%;
+    background-color: #f0f0f0;
+    justify-content: space-between;
+    
+}
+.thanhg a{
+    margin-left: 900px;
+    
+}
+
+
+
+
 
 
