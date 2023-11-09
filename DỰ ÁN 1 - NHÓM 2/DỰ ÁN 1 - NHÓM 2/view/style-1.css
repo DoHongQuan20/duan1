@@ -1,0 +1,280 @@
+* {
+    padding: 5px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    padding: 30px;
+    margin-right: 10px;
+    width: 200px;
+    /* Để tạo khoảng cách giữa ảnh và input */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 8px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+}
+
+
+/* Thiết kế cho menu tài khoản */
+
+.taikhoan {
+    text-align: right;
+    /* Canh phải */
+    margin-left: 100px;
+}
+
+.taikhoan ul {
+    list-style: none;
+    /* Ẩn dấu đầu dòng */
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+}
+
+.taikhoan ul li {
+    display: inline;
+    margin-right: 10px;
+    /* Khoảng cách giữa mỗi mục */
+    border-right: 1px solid #ccc;
+    /* Đường gạch ngăn */
+    padding-right: 10px;
+    /* Khoảng cách giữa chữ và đường gạch ngăn */
+}
+
+.taikhoan ul li:last-child {
+    border-right: none;
+    /* Loại bỏ đường gạch ngăn ở mục cuối cùng */
+}
+
+.taikhoan ul li :hover {
+    color: red;
+}
+
+.taikhoan ul li {
+    display: inline;
+    /* Hiển thị trên cùng một hàng */
+    margin-left: 7px;
+    /* Khoảng cách giữa các mục */
+}
+
+.taikhoan ul li a {
+    text-decoration: none;
+    /* Loại bỏ gạch chân mặc định trên liên kết */
+    color: #333;
+    /* Màu chữ */
+    padding: 1px;
+    /* Kích thước và khoảng cách trong mục */
+}
+
+.container {
+    display: flex;
+}
+
+.left-boxes,
+.right-boxes {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+}
+
+.left-boxes {
+    margin-left: -110px;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    margin: 5px;
+}
+
+.right-boxes ul {
+    display: flex;
+    /* Sử dụng Flexbox để xếp các mục danh sách theo hàng ngang */
+    list-style: none;
+    /* Ẩn dấu đầu dòng (bullet) của danh sách */
+    padding: 0;
+    margin-left: 70px;
+}
+
+.right-boxes ul :hover {
+    color: red;
+    font-size: 15px;
+}
+
+.right-boxes li {
+    margin-right: 20px;
+    /* Khoảng cách giữa các mục danh sách */
+}
+
+.right-boxes a {
+    text-decoration: none;
+    /* Ẩn gạch chân (underline) của liên kết */
+    color: #000;
+    /* Màu chữ đen */
+}
+
+.left-boxes {
+    padding: 20px;
+}
+
+.left-boxes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-top: -16px;
+    background-color: rgb(219, 83, 52);
+}
+
+.left-boxes li {
+    margin-right: 20px;
+}
+
+.horizontal-line {
+    border-top: 1px solid #000;
+    width: 100%;
+    margin-top: -25px;
+}
+
+.left-boxes a {
+    text-decoration: none;
+    color: #000;
+}
+
+.list-group-item {
+    width: 250px;
+    margin-left: 36px;
+}
+
+.list-group-item a {
+    text-decoration: none;
+    color: #000;
+}
+
+.list-group-item a:hover {
+    color: red;
+}
+
+.list-group {
+    margin-left: 34px;
+    text-align: center;
+}
+
+.list-group:hover {
+    color: red;
+}
+
+.controls {
+    margin-top: -40px;
+}
+
+.top-content {
+    margin-left: 0px;
+    width: 70%;
+    margin-top: -20px;
+}
+
+.row.sp {
+    display: flex;
+    margin: 5px;
+    gap: 10px;
+    margin-left: 110px;
+}
+
+.boxsp {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-left: 20px;
+}
+
+.boxsp img {
+    width: 220px;
+    height: auto;
+    display: block;
+    transition: filter 0.5s;
+}
+
+.boxsp p,
+.boxsp a {
+    text-align: center;
+}
+
+.thanhg {
+    width: 100%;
+    background-color: #f0f0f0;
+    justify-content: space-between;
+}
+
+.thanhg a {
+    margin-left: 10px;
+}
+
+.only {
+    margin-left: 780px;
+}
+
+.only img {
+    height: 150px;
+    width: 20px;
+}
+
+.styled-text {
+    font-family: 'Arial', sans-serif;
+    /* Thay đổi font chữ */
+    font-size: 3em;
+    /* Kích thước chữ to hơn */
+    color: #100908;
+    /* Màu đỏ đậm */
+    text-transform: uppercase;
+    /* Chuyển đổi chữ thành in hoa */
+    letter-spacing: 5px;
+    /* Khoảng cách giữa các chữ cái */
+    background-image: linear-gradient(45deg, #151103, #423d3d);
+    /* Nền gradient màu vàng nhạt */
+    -webkit-background-clip: text;
+    /* Hiển thị gradient nền trong vùng chữ */
+    color: transparent;
+    /* Ẩn chữ ban đầu */
+    animation: glowing 3s linear infinite;
+    /* Tạo hiệu ứng nhấp nháy */
+}
