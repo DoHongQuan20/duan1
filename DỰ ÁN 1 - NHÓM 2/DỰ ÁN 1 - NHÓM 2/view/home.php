@@ -28,18 +28,24 @@
             <li data-target="#demo" data-slide-to="0" class="active"></li>
             <li data-target="#demo" data-slide-to="1"></li>
             <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
           </ul>
 
           <!-- The slideshow -->
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="./img/banner1.jpg" alt="Los Angeles" height="410px">
+              <img src="./img/banner1.jpg" height="410px">
+            </div>
+
+            <div class="carousel-item">
+              <img src="./img/banner4.jpg" height="410px">
+            </div>
+
+            <div class="carousel-item">
+              <img src="./img/banner2.jpg" height="410px" width="725px">
             </div>
             <div class="carousel-item">
-              <img src="./img/13-pro-maxbanner.jpg" alt="Chicago" height="410px">
-            </div>
-            <div class="carousel-item">
-              <img src="./img/iphone-12-pro-banner.jpg" alt="New York" height="410px">
+              <img src="./img/banner3.jpg" height="410px" width="725px">
             </div>
           </div>
 
@@ -76,31 +82,31 @@
       <a href=""><img src="./img/ip14 promax.jpg" alt="Điện thoại 3"></a>
       <div class="name"><a href="#">Apple Watch seri3</a></div>
       <p>$5900</p>
-      
+
     </div>
     <div class="boxsp" data-aos="fade-up" data-aos-duration="2000">
       <a href=""><img src="./img/ip14 promax.jpg" alt="Điện thoại 3"></a>
       <div class="name"><a href="#">Apple Watch seri3</a></div>
       <p>$5900</p>
-      
+
     </div>
     <div class="boxsp" data-aos="fade-up" data-aos-duration="2000">
       <a href=""><img src="./img/ip14 promax.jpg" alt="Điện thoại 3"></a>
       <div class="name"><a href="#">Apple Watch seri3</a></div>
       <p>$5900</p>
-      
+
     </div>
     <div class="boxsp" data-aos="fade-up" data-aos-duration="2000">
       <a href=""><img src="./img/ip14 promax.jpg" alt="Điện thoại 3"></a>
       <div class="name"><a href="#">Apple Watch seri3</a></div>
       <p>$5900</p>
-      
+
     </div>
     <div class="boxsp" data-aos="fade-up" data-aos-duration="2000">
       <a href=""><img src="./img/ip14 promax.jpg" alt="Điện thoại 3"></a>
       <div class="name"><a href="#">Apple Watch seri3</a></div>
       <p>$5900</p>
-      
+
     </div>
 
   </div>
@@ -110,31 +116,31 @@
       <a href=""><img src="./img/ip14 promax.jpg" alt="Điện thoại 3"></a>
       <div class="name"><a href="#">Apple Watch seri3</a></div>
       <p>$5900</p>
-      
+
     </div>
     <div class="boxsp" data-aos="fade-up" data-aos-duration="2000">
       <a href=""><img src="./img/ip14 promax.jpg" alt="Điện thoại 3"></a>
       <div class="name"><a href="#">Apple Watch seri3</a></div>
       <p>$5900</p>
-      
+
     </div>
     <div class="boxsp" data-aos="fade-up" data-aos-duration="2000">
       <a href=""><img src="./img/ip14 promax.jpg" alt="Điện thoại 3"></a>
       <div class="name"><a href="#">Apple Watch seri3</a></div>
       <p>$5900</p>
-      
+
     </div>
     <div class="boxsp" data-aos="fade-up" data-aos-duration="2000">
       <a href=""><img src="./img/ip14 promax.jpg" alt="Điện thoại 3"></a>
       <div class="name"><a href="#">Apple Watch seri3</a></div>
       <p>$5900</p>
-      
+
     </div>
     <div class="boxsp" data-aos="fade-up" data-aos-duration="2000">
       <a href=""><img src="./img/ip14 promax.jpg" alt="Điện thoại 3"></a>
       <div class="name"><a href="#">Apple Watch seri3</a></div>
       <p>$5900</p>
-      
+
     </div>
 
   </div>

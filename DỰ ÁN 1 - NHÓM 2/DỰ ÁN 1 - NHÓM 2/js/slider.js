@@ -13,7 +13,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
     let i;
-    let slides = document.getElementsByClassName("mySlides");
+    let slides = document.getElementsByClassName("carousel-item");
     let dots = document.getElementsByClassName("dot");
     if (n > slides.length) {
         slideIndex = 1;
@@ -35,7 +35,7 @@ showSlides();
 
 function showSlides() {
     let i;
-    let slides = document.getElementsByClassName("mySlides");
+    let slides = document.getElementsByClassName("carousel-item");
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
@@ -44,5 +44,5 @@ function showSlides() {
         slideIndex = 1;
     }
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 2000); // Change image every 4 seconds
+    setTimeout(showSlides, 1000); // Change image every 4 seconds
 }
