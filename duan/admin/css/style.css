@@ -19,13 +19,14 @@ header {
 }
 
 .nav {
-    height: 800px;
+    height: fit-content;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    width: 280px;
 }
 
 .nav-item {
-    width: 250px;
+    width: 280px;
     background-color: #ffffff;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-item a {
@@ -33,6 +34,15 @@ header {
     padding: 15px;
     text-decoration: none;
     color: #333;
+    border-radius: 1px solid #adadad;
+    text-align: center;
+}
+
+.nav-item p {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #088efb;
     border-radius: 1px solid #adadad;
     text-align: center;
 }

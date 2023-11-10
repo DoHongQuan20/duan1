@@ -26,29 +26,32 @@
             <div class="col-sm-4">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Trang chủ</a>
+                        <a class="nav-link" href="#"><b>Trang chủ</b></a>
                     </li>
                     <li class="nav-item dropdown dropright">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="">Danh mục</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><b>Danh mục</b></a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="index.php?act=adddm">Thêm mới</a>
                             <a class="dropdown-item" href="index.php?act=listdm">Xem danh mục</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?act=addhh">Hàng hoá</a>
+                        <a class="nav-link" href="index.php?act=addhh"><b>Hàng hoá</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Khách hàng</a>
+                        <a class="nav-link" href="#"><b>Khách hàng</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Bình luận</a>
+                        <a class="nav-link" href="#"><b>Bình luận</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Đơn hàng</a>
+                        <a class="nav-link" href="#"><b>Đơn hàng</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Thống kê</a>
+                        <a class="nav-link" href="#"><b>Thống kê</b></a>
+                    </li>
+                    <li class="nav-item">
+                       <p>Copy by Do Hong Quan @2023</p>
                     </li>
                 </ul>
             </div>
