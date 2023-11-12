@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .dropdown-list {
+            position: absolute;
+            display: none;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .dropdown-list li {
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .dropdown-list li:hover {
+            background-color: #f4f4f4;
+        }
+        /* Hiển thị danh sách khi hover hoặc focus */
+        
+        .dropdown:hover .dropdown-list {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Dropdown container -->
+    <div class="dropdown">
+        <!-- Dropdown button/select -->
+        <div class="dropdown-select">Chọn một mục</div>
+
+        <!-- Dropdown list -->
+        <ul class="dropdown-list">
+            <li>Mục 1</li>
+            <li>Mục 2</li>
+            <li>Mục 3</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

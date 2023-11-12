@@ -56,7 +56,8 @@ button {
 .taikhoan {
     text-align: right;
     /* Canh phải */
-    margin-left: 100px;
+    margin-left: 60px;
+    margin-top: 20px;
 }
 
 .taikhoan ul {
@@ -101,6 +102,77 @@ button {
     /* Màu chữ */
     padding: 1px;
     /* Kích thước và khoảng cách trong mục */
+}
+
+
+/* dangnhap */
+
+.icontext {
+    display: flex;
+    margin-left: 80px;
+}
+
+.icontext .text {
+    display: flex;
+    margin-left: 50px;
+    margin-top: -50px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.dropdown-select {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-list {
+    position: absolute;
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #ffffff;
+    color: #151103;
+}
+
+.dropdown-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-list :hover {
+    background-color: #bf2828;
+    color: #ffffff;
+}
+
+
+/* Hiển thị danh sách khi hover hoặc focus */
+
+.dropdown:hover .dropdown-list {
+    display: block;
+}
+
+.footer {
+    margin-left: 100px;
+}
+
+.footer h5 {
+    color: black;
+}
+
+.footer a {
+    color: black;
+    font-size: 13px;
 }
 
 .container {
@@ -316,4 +388,72 @@ button {
 
 .hnh2 {
     margin-left: -100px;
+}
+
+td {
+    vertical-align: middle;
+}
+
+
+/*giỏ hàng*/
+
+@media screen and (max-width: 600px) {
+    table#cart tbody td .form-control {
+        width: 20%;
+        display: inline !important;
+    }
+    .actions .btn {
+        width: 36%;
+        margin: 1.5em 0;
+    }
+    .actions .btn-info {
+        float: left;
+    }
+    .actions .btn-danger {
+        float: right;
+    }
+    table#cart thead {
+        display: none;
+    }
+    table#cart tbody td {
+        display: block;
+        padding: .6rem;
+        min-width: 320px;
+    }
+    table#cart tbody tr td:first-child {
+        background: #333;
+        color: #fff;
+    }
+    table#cart tbody td:before {
+        content: attr(data-th);
+        font-weight: bold;
+        display: inline-block;
+        width: 8rem;
+    }
+    table#cart tfoot td {
+        display: block;
+    }
+    table#cart tfoot td .btn {
+        display: block;
+    }
+}
+
+
+/* footer-footer */
+
+.footer-footer {
+    margin-left: 80px;
+}
+
+.dcv img {
+    width: 100px;
+    border-radius: 40px;
+}
+
+.dcv {
+    display: flex;
+}
+
+.thongtin {
+    margin-top: 10px;
 }

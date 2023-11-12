@@ -13,14 +13,14 @@ function delete_hanghoa($mahh)
 
 function loadall_hanghoa_top10()
 {
-    $sql = "SELECT * from hanghoa where 1 order by luot_xem desc limit 0,10";
+    $sql = "SELECT * from hanghoa where 1 order by luotxem desc limit 0,10";
     $listhh = pdo_query($sql);
     return $listhh;
 }
 
 function loadall_hanghoa_home()
 {
-    $sql = "SELECT * from hanghoa where 1 order by ma_hh desc limit 0,9";
+    $sql = "SELECT * from hanghoa where 1 order by mahh desc limit 0,9";
     $listhh = pdo_query($sql);
     return $listhh;
 }
@@ -39,38 +39,38 @@ function loadall_hanghoa($key="",$iddm = 0)
     return $listhh;
 }
 
-function loadone_hanghoa_cungloai($ma_hh, $id_dm)
+function loadone_hanghoa_cungloai($mahh, $iddm)
 {
-    $sql = "SELECT * FROM hanghoa where id_dm=" . $id_dm . " and ma_hh <>" . $ma_hh;
+    $sql = "SELECT * FROM hanghoa where iddm=" . $iddm . " and mahh <>" . $mahh;
     $listhh = pdo_query($sql);
     return $listhh;
 }
 
-function load_ten_danhmuc($id_dm)
+function load_ten_danhmuc($iddm)
 {
-    if ($id_dm > 0) {
-        $sql = "SELECT * FROM danhmuc where ma_loai=".$id_dm;
+    if ($iddm > 0) {
+        $sql = "SELECT * FROM danhmuc where madm=".$iddm;
         $dm = pdo_query_one($sql);
         extract($dm);
-        return $ten_loai;
+        return $tendm;
     } else {
         echo "";
     }
 }
 
-function loadone_hanghoa($ma_hh)
+function loadone_hanghoa($mahh)
 {
-    $sql = "SELECT * FROM hanghoa where ma_hh=" . $ma_hh;
+    $sql = "SELECT * FROM hanghoa where mahh=" . $mahh;
     $hh = pdo_query_one($sql);
     return $hh;
 }
 
-function update_hanghoa($ma_hh, $id_dm, $ten_hh, $don_gia, $hinh_anh, $mo_ta)
+function update_hanghoa($mahh, $iddm, $tenhh, $dongia, $hinhanh, $mota)
 {
-    if ($hinh_anh != '') {
-        $sql = "UPDATE hanghoa SET id_dm ='$id_dm',ten_hh= '$ten_hh',don_gia = '$don_gia',hinh_anh= '$hinh_anh',mo_ta= '$mo_ta' where ma_hh ='$ma_hh'";
+    if ($hinhanh != '') {
+        $sql = "UPDATE hanghoa SET iddm ='$iddm',tenhh= '$tenhh',dongia = '$dongia',hinhanh= '$hinhanh',mota= '$mota' where mahh ='$mahh'";
     } else {
-        $sql = "UPDATE hanghoa SET id_dm ='$id_dm',ten_hh= '$ten_hh',don_gia = '$don_gia',mo_ta= '$mo_ta' where ma_hh ='$ma_hh'";
+        $sql = "UPDATE hanghoa SET iddm ='$iddm',tenhh= '$tenhh',dongia = '$dongia',mota= '$mota' where mahh ='$mahh'";
     }
     pdo_execute($sql);
 }

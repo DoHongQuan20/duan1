@@ -19,7 +19,7 @@ header {
 }
 
 .nav {
-    height: fit-content;
+    height: 640px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     width: 280px;
 }
@@ -38,6 +38,10 @@ header {
     text-align: center;
 }
 
+.duoi {
+    margin-top: 105px;
+}
+
 .nav-item p {
     display: block;
     padding: 15px;
@@ -45,6 +49,7 @@ header {
     color: #088efb;
     border-radius: 1px solid #adadad;
     text-align: center;
+    float: inline-end;
 }
 
 .nav-item a:hover {
