@@ -529,9 +529,25 @@ td {
     height: 350px;
 }
 
+.phone-list-item img {
+    display: grid;
+    transition: transform 0.5s;
+    transform: scale(1);
+    margin: auto;
+    margin-top: -15px;
+}
+
+.phone-list-item:hover img {
+    transform: scale(1.1);
+}
+
 .phone-list-item p {
     text-align: center;
     margin-top: -5px;
+}
+
+.phone-list-item .name {
+    margin-top: -10px;
 }
 
 .phone-list-item input[type="button"] {

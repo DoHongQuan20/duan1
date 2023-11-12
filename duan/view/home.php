@@ -147,61 +147,61 @@
     <div class="phone-list-wrapper">
       <div class="phone-list">
         <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000" >
-          <a href=""><img src="./img/ip14 promax.jpg" width=" 200px;" alt="Điện thoại 3"></a>
+          <a href=""><img src="./img/ip14 promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
           <div class="name"><a href="#">Apple Watch seri3</a></div>
           <p>$5900</p>
           <a href=""><input type="button" value="Add to cart"></a>
         </div>
         <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14 promax.jpg" width=" 200px;"alt="Điện thoại 3"></a>
+          <a href=""><img src="./img/ip14 promax.jpg" width=" 210px;" height="210px"alt="Điện thoại 3"></a>
           <div class="name"><a href="#">Apple Watch seri3</a></div>
           <p>$5900</p>
           <a href=""><input type="button" value="Add to cart"></a>
         </div>
         <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14 promax.jpg" width=" 200px;" alt="Điện thoại 3"></a>
+          <a href=""><img src="./img/ip14 promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
           <div class="name"><a href="#">Apple Watch seri3</a></div>
           <p>$5900</p>
           <a href=""><input type="button" value="Add to cart"></a>
         </div>
         <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14 promax.jpg" width=" 200px;" alt="Điện thoại 3"></a>
+          <a href=""><img src="./img/ip14 promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
           <div class="name"><a href="#">Apple Watch seri3</a></div>
           <p>$5900</p>
           <a href=""><input type="button" value="Add to cart"></a>
         </div>
         <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14 promax.jpg" width=" 200px;" alt="Điện thoại 3"></a>
+          <a href=""><img src="./img/ip14 promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
           <div class="name"><a href="#">Apple Watch seri3</a></div>
           <p>$5900</p>
           <a href=""><input type="button" value="Add to cart"></a>
         </div>
         <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14 promax.jpg" width=" 200px;" alt="Điện thoại 3"></a>
+          <a href=""><img src="./img/ip14 promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
           <div class="name"><a href="#">Apple Watch seri3</a></div>
           <p>$5900</p>
           <a href=""><input type="button" value="Add to cart"></a>
         </div>
         <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14 promax.jpg" width=" 200px;"  alt="Điện thoại 3"></a>
+          <a href=""><img src="./img/ip14 promax.jpg" width=" 210px;" height="210px"  alt="Điện thoại 3"></a>
           <div class="name"><a href="#">Apple Watch seri3</a></div>
           <p>$5900</p>
           <a href=""><input type="button" value="Add to cart"></a>
         </div>
         <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14 promax.jpg" width=" 200px;" alt="Điện thoại 3"></a>
+          <a href=""><img src="./img/ip14 promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
           <div class="name"><a href="#">Apple Watch seri3</a></div>
           <p>$5900</p>
           <a href=""><input type="button" value="Add to cart"></a>
         </div>
         <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14 promax.jpg" width=" 200px;" alt="Điện thoại 3"></a>
+          <a href=""><img src="./img/ip14 promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
           <div class="name"><a href="#">Apple Watch seri3</a></div>
           <p>$5900</p>
           <a href=""><input type="button" value="Add to cart"></a>
         </div>
         <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14 promax.jpg" width=" 200px;"  alt="Điện thoại 3"></a>
+          <a href=""><img src="./img/ip14 promax.jpg" width=" 210px;" height="210px"  alt="Điện thoại 3"></a>
           <div class="name"><a href="#">Apple Watch seri3</a></div>
           <p>$5900</p>
           <a href=""><input type="button" value="Add to cart"></a>
