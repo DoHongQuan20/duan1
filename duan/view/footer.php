@@ -1,11 +1,10 @@
 
 <br><br>
-<hr class="horizontal-line" data-aos="fade-up" data-aos-duration="106875]
-=ƠP-07IK865GT4R3E2Q1  A 00" />
+<hr class="horizontal-line"/>
 <div class="footer-footer">
   <div class="row">
     <div class="col-md-3">
-      <div class="dcv" data-aos="fade-up" data-aos-duration="1000">
+      <div class="dcv" >
         <div class="imgpa">
           <img src="./img/fb2.jpg" alt="">
         </div>
@@ -17,7 +16,7 @@
 
     </div>
     <div class="col-md-3">
-    <div class="dcv" data-aos="fade-up" data-aos-duration="1000">
+    <div class="dcv" >
         <div class="imgpa">
           <img src="./img/thanhtoan3.jpg" alt="">
         </div>
@@ -28,7 +27,7 @@
       </div>
     </div>
     <div class="col-md-3">
-    <div class="dcv" data-aos="fade-up" data-aos-duration="1000">
+    <div class="dcv" >
         <div class="imgpa">
           <img src="./img/hot.jpg" alt="">
         </div>
@@ -39,7 +38,7 @@
       </div>
     </div>
     <div class="col-md-3">
-    <div class="dcv" data-aos="fade-up" data-aos-duration="1000">
+    <div class="dcv" >
         <div class="imgpa">
           <img src="./img/ship.jpg" alt="">
         </div>
@@ -51,13 +50,13 @@
     </div>
   </div>
 </div> 
-<hr class="my-4" data-aos="fade-up" data-aos-duration="1000">
+<hr class="my-4" >
 
 <!--footer  -->
 <div class="footer">
   <div class="row">
     <div class="col-md-3">
-      <div class="footer-er" data-aos="fade-up" data-aos-duration="1000">
+      <div class="footer-er" >
         <h5>HỆ THỐNG MONA MEDIA</h5>
         <a href="">Chính sách & Quy định chung</a><br>
         <a href="">Chính sách đổi trả sản phẩm</a><br>
@@ -66,7 +65,7 @@
       </div>
     </div>
     <div class="col-md-3">
-      <div class="footer-er" data-aos="fade-up" data-aos-duration="1000">
+      <div class="footer-er" >
         <h5>HỖ TRỢ KHÁCH HÀNG</h5>
         <a href="">Giới thiệu</a><br>
         <a href="">Tin tức</a><br>
@@ -75,7 +74,7 @@
       </div>
     </div>
     <div class="col-md-3">
-      <div class="footer-er" data-aos="fade-up" data-aos-duration="1000">
+      <div class="footer-er" >
         <h5>HỖ TRỢ KHÁCH HÀNG</h5>
         <a href="">Hỗ trợ mua hàng trực tuyến</a><br>
         <a href="">Các hình thức thanh toán</a><br>
@@ -84,7 +83,7 @@
       </div>
     </div>
     <div class="col-md-3">
-      <div class="footer-er" data-aos="fade-up" data-aos-duration="1000">
+      <div class="footer-er" >
         <h5>HỖ TRỢ KHÁCH HÀNG</h5>
         <a href="">Giới thiệu</a><br>
         <a href="">Tin tức</a><br>

@@ -20,7 +20,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $pass = $_POST['pass'];
                 $tel = $_POST['tel'];
                 $address = $_POST['address'];
-                insert_taikhoan($name,$user,$email,$pass,$tel,$address);
+                insert_taikhoan($name, $user, $email, $pass, $tel, $address);
                 $thongbao = "Đã đăng kí thành công";
             }
             include "view/taikhoan/dangky.php";
@@ -40,9 +40,14 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             }
             include "view/taikhoan/dangnhap.php";
             break;
-            case 'giohang':
-                include "view/cart/cart.php";
-                break;
+        case 'thoat':
+            session_unset();
+            header('location: index.php');
+            break;
+           
+        case 'giohang':
+            include "view/cart/cart.php";
+            break;
 
         default:
             include "view/home.php";

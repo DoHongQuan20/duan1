@@ -46,7 +46,7 @@
               <?php } ?>
               <li><a class="dropdown-item pl-3 py-2" href="#">Cập nhật tài khoản</a></li>
               <li><a class="dropdown-item pl-3 py-2" href="#">Đổi mật khẩu</a></li>
-              <li><a class="dropdown-item pl-3 py-2" href="#">Đăng xuất</a></li>
+              <li><a class="dropdown-item pl-3 py-2" href="index.php?act=thoat">Đăng xuất</a></li>
             <?php } ?>
 
 

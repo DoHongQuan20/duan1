@@ -179,6 +179,11 @@ button {
     display: flex;
 }
 
+.text>a :hover {
+    text-decoration: none;
+    color: #bf2828;
+}
+
 .left-boxes,
 .right-boxes {
     display: flex;
@@ -203,7 +208,7 @@ button {
     list-style: none;
     /* Ẩn dấu đầu dòng (bullet) của danh sách */
     padding: 0;
-    margin-left: 70px;
+    margin-left: 120px;
 }
 
 .right-boxes ul :hover {
@@ -306,11 +311,13 @@ button {
     border: 1px rgb(205, 205, 205) solid;
     width: 240px;
     position: relative;
+    height: 380px;
+    max-height: fit-content;
 }
 
 .boxsp img {
-    width: 220px;
-    height: auto;
+    width: 190px;
+    height: 200px;
     display: block;
     transition: transform 0.5s;
     transform: scale(1);
@@ -319,6 +326,23 @@ button {
 
 .boxsp:hover img {
     transform: scale(1.1);
+}
+
+.boxsp input[type="button"] {
+    position: absolute;
+    border-radius: 30px;
+    height: 30px;
+    font-size: small;
+    background-color: #ffffff;
+    color: rgb(0, 136, 255);
+    margin-left: 72px;
+    margin-top: -35px;
+    border: 1px rgb(0, 136, 255) solid;
+}
+
+.boxsp input[type="button"]:hover {
+    color: #ffffff;
+    background-color: rgb(74, 163, 240);
 }
 
 
@@ -335,10 +359,12 @@ button {
 
 .name a {
     color: red;
+    font-size: medium;
 }
 
 .name a :hover {
     color: rgb(93, 5, 5);
+    text-decoration: none;
 }
 
 .thanhg {
@@ -456,4 +482,81 @@ td {
 
 .thongtin {
     margin-top: 10px;
+}
+
+
+/*top 10*/
+
+.phone-list-container {
+    padding: 0;
+    border: 1px rgb(206, 206, 206) solid;
+    height: 450px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.phone-list-title {
+    background-color: #3498db;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.phone-list-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.phone-list {
+    display: flex;
+    align-items: center;
+    height: 350px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.phone-list-item {
+    margin-right: 10px;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 3px 3px 6px rgb(171, 171, 171);
+    border-radius: 5px;
+    margin-left: 10px;
+    border: 1px rgb(205, 205, 205) solid;
+    width: 300px;
+    height: 350px;
+}
+
+.phone-list-item p {
+    text-align: center;
+    margin-top: -5px;
+}
+
+.phone-list-item input[type="button"] {
+    position: absolute;
+    border-radius: 30px;
+    height: 30px;
+    font-size: small;
+    background-color: #ffffff;
+    color: rgb(0, 136, 255);
+    margin-left: 63px;
+    margin-top: -15px;
+    border: 1px rgb(0, 136, 255) solid;
+}
+
+.phone-list-item input[type="button"]:hover {
+    color: #ffffff;
+    background-color: rgb(74, 163, 240);
+}
+
+.arrow {
+    font-size: 70px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
 }
