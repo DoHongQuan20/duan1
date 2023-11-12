@@ -11,10 +11,6 @@
       ?>
     </select>
     <div class="form-group">
-      <label for="mahh">Mã hàng hoá</label>
-      <input type="text" class="form-control" name="mahh" placeholder="Auto" disabled>
-    </div>
-    <div class="form-group">
       <label for="tenhh">Tên hàng</label>
       <input type="text" class="form-control" name="tenhh" placeholder="Điền tên hàng hoá">
     </div>

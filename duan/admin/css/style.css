@@ -18,10 +18,20 @@ header {
     width: 101%;
 }
 
-.nav {
-    height: 640px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+.navtong {
+    height: 100%;
     width: 280px;
+    background-color: #ffffff;
+    padding-top: 0px;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    height: 100%;
+    width: 280px;
+    overflow-x: hidden;
 }
 
 .nav-item {
@@ -114,4 +124,74 @@ h2 {
 
 .nutbtn:hover {
     background-color: #138496;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    padding-top: 20px;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.dropdown-btn {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: #333;
+    padding: 15px 20px;
+    background-color: #FFFFFF;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    font-size: medium;
+}
+
+.dropdown-container {
+    display: none;
+    background-color: #f0f0f0;
+    padding-left: 0px;
+}
+
+.dropdown-container a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.dropdown-container a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar.open {
+    width: 250px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 16px;
+    }
 }
