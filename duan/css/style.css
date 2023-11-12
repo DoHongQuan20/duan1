@@ -56,7 +56,8 @@ button {
 .taikhoan {
     text-align: right;
     /* Canh phải */
-    margin-left: 100px;
+    margin-left: 60px;
+    margin-top: 20px;
 }
 
 .taikhoan ul {
@@ -103,8 +104,84 @@ button {
     /* Kích thước và khoảng cách trong mục */
 }
 
+
+/* dangnhap */
+
+.icontext {
+    display: flex;
+    margin-left: 80px;
+}
+
+.icontext .text {
+    display: flex;
+    margin-left: 50px;
+    margin-top: -50px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.dropdown-select {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-list {
+    position: absolute;
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #ffffff;
+    color: #151103;
+}
+
+.dropdown-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-list :hover {
+    background-color: #bf2828;
+    color: #ffffff;
+}
+
+
+/* Hiển thị danh sách khi hover hoặc focus */
+
+.dropdown:hover .dropdown-list {
+    display: block;
+}
+
+.footer {
+    margin-left: 100px;
+}
+
+.footer h5 {
+    color: black;
+}
+
+.footer a {
+    color: black;
+    font-size: 13px;
+}
+
 .container {
     display: flex;
+}
+
+.text>a :hover {
+    text-decoration: none;
+    color: #bf2828;
 }
 
 .left-boxes,
@@ -131,7 +208,7 @@ button {
     list-style: none;
     /* Ẩn dấu đầu dòng (bullet) của danh sách */
     padding: 0;
-    margin-left: 70px;
+    margin-left: 120px;
 }
 
 .right-boxes ul :hover {
@@ -234,11 +311,13 @@ button {
     border: 1px rgb(205, 205, 205) solid;
     width: 240px;
     position: relative;
+    height: 380px;
+    max-height: fit-content;
 }
 
 .boxsp img {
-    width: 220px;
-    height: auto;
+    width: 190px;
+    height: 200px;
     display: block;
     transition: transform 0.5s;
     transform: scale(1);
@@ -247,6 +326,23 @@ button {
 
 .boxsp:hover img {
     transform: scale(1.1);
+}
+
+.boxsp input[type="button"] {
+    position: absolute;
+    border-radius: 30px;
+    height: 30px;
+    font-size: small;
+    background-color: #ffffff;
+    color: rgb(0, 136, 255);
+    margin-left: 72px;
+    margin-top: -35px;
+    border: 1px rgb(0, 136, 255) solid;
+}
+
+.boxsp input[type="button"]:hover {
+    color: #ffffff;
+    background-color: rgb(74, 163, 240);
 }
 
 
@@ -263,10 +359,12 @@ button {
 
 .name a {
     color: red;
+    font-size: medium;
 }
 
 .name a :hover {
     color: rgb(93, 5, 5);
+    text-decoration: none;
 }
 
 .thanhg {
@@ -316,4 +414,165 @@ button {
 
 .hnh2 {
     margin-left: -100px;
+}
+
+td {
+    vertical-align: middle;
+}
+
+
+/*giỏ hàng*/
+
+@media screen and (max-width: 600px) {
+    table#cart tbody td .form-control {
+        width: 20%;
+        display: inline !important;
+    }
+    .actions .btn {
+        width: 36%;
+        margin: 1.5em 0;
+    }
+    .actions .btn-info {
+        float: left;
+    }
+    .actions .btn-danger {
+        float: right;
+    }
+    table#cart thead {
+        display: none;
+    }
+    table#cart tbody td {
+        display: block;
+        padding: .6rem;
+        min-width: 320px;
+    }
+    table#cart tbody tr td:first-child {
+        background: #333;
+        color: #fff;
+    }
+    table#cart tbody td:before {
+        content: attr(data-th);
+        font-weight: bold;
+        display: inline-block;
+        width: 8rem;
+    }
+    table#cart tfoot td {
+        display: block;
+    }
+    table#cart tfoot td .btn {
+        display: block;
+    }
+}
+
+
+/* footer-footer */
+
+.footer-footer {
+    margin-left: 80px;
+}
+
+.dcv img {
+    width: 100px;
+    border-radius: 40px;
+}
+
+.dcv {
+    display: flex;
+}
+
+.thongtin {
+    margin-top: 10px;
+}
+
+
+/*top 10*/
+
+.phone-list-container {
+    padding: 0;
+    border: 1px rgb(206, 206, 206) solid;
+    height: 450px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.phone-list-title {
+    background-color: #3498db;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.phone-list-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.phone-list {
+    display: flex;
+    align-items: center;
+    height: 350px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.phone-list-item {
+    margin-right: 10px;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 3px 3px 6px rgb(171, 171, 171);
+    border-radius: 5px;
+    margin-left: 10px;
+    border: 1px rgb(205, 205, 205) solid;
+    width: 300px;
+    height: 350px;
+}
+
+.phone-list-item img {
+    display: grid;
+    transition: transform 0.5s;
+    transform: scale(1);
+    margin: auto;
+    margin-top: -15px;
+}
+
+.phone-list-item:hover img {
+    transform: scale(1.1);
+}
+
+.phone-list-item p {
+    text-align: center;
+    margin-top: -5px;
+}
+
+.phone-list-item .name {
+    margin-top: -10px;
+}
+
+.phone-list-item input[type="button"] {
+    position: absolute;
+    border-radius: 30px;
+    height: 30px;
+    font-size: small;
+    background-color: #ffffff;
+    color: rgb(0, 136, 255);
+    margin-left: 63px;
+    margin-top: -15px;
+    border: 1px rgb(0, 136, 255) solid;
+}
+
+.phone-list-item input[type="button"]:hover {
+    color: #ffffff;
+    background-color: rgb(74, 163, 240);
+}
+
+.arrow {
+    font-size: 70px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
 }

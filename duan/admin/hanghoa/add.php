@@ -11,10 +11,6 @@
       ?>
     </select>
     <div class="form-group">
-      <label for="mahh">Mã hàng hoá</label>
-      <input type="text" class="form-control" name="mahh" placeholder="Auto" disabled>
-    </div>
-    <div class="form-group">
       <label for="tenhh">Tên hàng</label>
       <input type="text" class="form-control" name="tenhh" placeholder="Điền tên hàng hoá">
     </div>
@@ -33,9 +29,9 @@
 
     <button type="submit" name="them" class="btn btn-success">Thêm</button>
     <a href="index.php?act=listhh"><input class="btn btn-primary" type="button" value="Danh sách"></a><br><br>
-    <label for=""><?php if (isset($thongbao) && ($thongbao != "")) {
-                    echo $thongbao;
-                  } ?></label>
+    <label for=""><b><?php if (isset($thongbao) && ($thongbao != "")) {
+                        echo $thongbao;
+                      } ?></b></label>
   </form>
 
 </div>

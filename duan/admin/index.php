@@ -71,32 +71,68 @@ if (isset($_GET['act'])) {
             //var_dump($listdm);
             include "hanghoa/add.php";
             break;
-            case 'listhh':
-                if (isset($_POST['list'])) {
-                    $key = $_POST['key'];
-                    $iddm = $_POST['iddm'];
-                } else {
-                    $key = '';
-                    $iddm = 0;
-                }
+        case 'listhh':
+            if (isset($_POST['list'])) {
+                $key = $_POST['key'];
+                $iddm = $_POST['iddm'];
+            } else {
+                $key = '';
+                $iddm = 0;
+            }
+            $listdm = loadall_danhmuc();
+            $listhh = loadall_hanghoa($key, $iddm);
+            include "hanghoa/list.php";
+            break;
+        case 'xoahh':
+            if ($_GET['mahh'] && $_GET['mahh'] > 0) {
+                delete_hanghoa($_GET['mahh']);
+            }
+            if (isset($_POST['list'])) {
+                $key = $_POST['key'];
+                $iddm = $_POST['iddm'];
+            } else {
+                $key = '';
+                $iddm = 0;
+            }
+            $listhh = loadall_hanghoa($key, $iddm);
+            include "hanghoa/list.php";
+            break;
+        case 'suahh':
+            if ($_GET['mahh'] > 0) {;
+                $hh = loadone_hanghoa($_GET['mahh']);
                 $listdm = loadall_danhmuc();
-                $listhh = loadall_hanghoa($key, $iddm);
-                include "hanghoa/list.php";
-                break;
-            case 'xoahh':
-                if ($_GET['mahh'] && $_GET['mahh'] > 0) {
-                    delete_hanghoa($_GET['mahh']);
-                }
-                if (isset($_POST['list'])) {
-                    $key = $_POST['key'];
-                    $iddm = $_POST['iddm'];
+            }
+            include "hanghoa/update.php";
+            break;
+        case 'updatehh':
+            if (isset($_POST['capnhat'])) {
+                $mahh = $_POST['mahh'];
+                $iddm = $_POST['iddm'];
+                $tenhh = $_POST['tenhh'];
+                $dongia = $_POST['dongia'];
+                $hinhanh = $_FILES['hinhanh']['name'];
+                $mota = $_POST['mota'];
+                $target_dir = "uploads/";
+                $target_file = $target_dir . basename($_FILES['hinhanh']['name']);
+                if (move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file)) {
+                    //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
                 } else {
-                    $key = '';
-                    $iddm = 0;
+                    //echo "Sorry, there was an error uploading your file.";
                 }
-                $listhh = loadall_hanghoa($key, $iddm);
-                include "hanghoa/list.php";
-                break;
+                update_hanghoa($mahh, $iddm, $tenhh, $dongia, $hinhanh, $mota);
+                $thongbao = "Cập nhật thành công";
+            }
+            if (isset($_POST['list'])) {
+                $key = $_POST['key'];
+                $iddm = $_POST['iddm'];
+            } else {
+                $key = '';
+                $iddm = 0;
+            }
+            $listdm = loadall_danhmuc();
+            $listhh = loadall_hanghoa($key, $iddm);
+            include "hanghoa/list.php";
+            break;
     }
 } else {
     include "home.php";
