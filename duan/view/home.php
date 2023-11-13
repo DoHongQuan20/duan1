@@ -70,7 +70,7 @@
 
 <div class="sanpham">
   <div class="thanhg">
-    <a href="">Iphone</a>/
+    <a href=" ">Iphone</a>/
     <a href="">Oppo</a>/
     <a href="">Apple Watch</a>
   </div><br>
