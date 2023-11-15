@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .form {
+            text-align: center;
+        }
+        
+        #form1 {
+            width: 600px;
+            background: #fff;
+            margin: 0 auto;
+        }
+        
+        #form1 input[type=text] {
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 18px;
+            color: #555;
+            display: block;
+            line-height: 1.2;
+            background-color: #fff;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            height: 50px;
+            padding: 0 20px 0 23px;
+            border: 0;
+            box-shadow: 0 5px 20px 0 rgb(0 0 0 / 5%);
+            -moz-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .05);
+            -webkit-box-shadow: 0 5px 20px 0 rgb(0 0 0 / 5%);
+            -o-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .05);
+            -ms-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .05);
+        }
+        
+        #form1 input[type=text]:focus {
+            border: 0;
+            outline: none;
+            box-shadow: 0 5px 20px 0 rgb(250 66 81 / 10%);
+            -moz-box-shadow: 0 5px 20px 0 rgba(250, 66, 81, .1);
+            -webkit-box-shadow: 0 5px 20px 0 rgb(250 66 81 / 10%);
+            -o-box-shadow: 0 5px 20px 0 rgba(250, 66, 81, .1);
+            -ms-box-shadow: 0 5px 20px 0 rgba(250, 66, 81, .1);
+        }
+        
+        #form1 #fcontent {
+            outline: none;
+            min-height: 150px;
+        }
+        
+        #form1 input[type=submit] {
+            background-color: #D9534F;
+            height: 42px;
+            padding: 5px 20px;
+            border-radius: 21px;
+            font-size: 14px;
+            text-tranforms: uppercase;
+            color: #fff;
+            border: 0;
+        }
+        
+        #form1 input[type="submit"]:hover {
+            background: #CC4949;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">
+        Liên hệ với chúng tôi
+    </h1>
+
+
+    <div class="form">
+        <form action="" id="form1">
+            <input type="text" id="fname" name="fname" placeholder="Họ tên"><br>
+            <input type="text" id="femail" name="femail" placeholder="Địa chỉ Email"><br>
+            <input type="text" id="fcontent" name="fcontent" placeholder="Nội dung yêu cầu"><br>
+            <input type="submit" value="Gửi yêu cầu">
+        </form>
+    </div>
+</body>
+
+</html>

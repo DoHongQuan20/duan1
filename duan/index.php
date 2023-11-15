@@ -12,6 +12,9 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'lienhe':
             include "view/lienhe.php";
             break;
+            case 'sanpham':
+                include "view/sanpham.php";
+                break;
         case 'dangky':
             if (isset($_POST['dangky']) && ($_POST['dangky'])) {
                 $email = $_POST['email'];
@@ -44,9 +47,12 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             session_unset();
             header('location: index.php');
             break;
-           
+
         case 'giohang':
             include "view/cart/cart.php";
+            break;
+        case 'ctsanpham':
+            include "view/chitietsanpham.php";
             break;
 
         default:

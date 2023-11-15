@@ -37,18 +37,21 @@
                                 <a class="nav-link" href="../index.php"><i class="fas fa-home" style="margin: 10px;"></i><b>Trang chủ</b></a>
                             </li>
                             <li class="nav-item ">
-                                <a class="dropdown-btn nav-link" onclick="toggleDropdown('dropdown1')"><i class="fas fa-cubes" style="margin: 10px;"></i><b>Danh mục</b></a>
+                                <a class="dropdown-btn nav-link" onclick="toggleDropdown('dropdown1')"><i class="fas fa-cubes" style="margin: 10px; margin-left: 40px;"></i><b>Danh mục</b><i class="fas fa-angle-down" style="margin: 10px;"></i></a>
                                 <div class="dropdown-container" id="dropdown1">
-                                    <a href="#">Thêm mới danh mục</a>
-                                    <a href="#">Danh sách danh mục</a>
+                                    <a href="index.php?act=adddm">Thêm mới danh mục</a>
+                                    <a href="index.php?act=listdm">Danh sách danh mục</a>
                                 </div>
-
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index.php?act=addhh"><b><i class="fas fa-box-open" style="margin: 10px;"></i>Hàng hoá</b></a>
+                                <a class="dropdown-btn nav-link" onclick="toggleDropdown('dropdown2')"><b><i class="fas fa-box-open" style="margin: 10px; margin-left: 40px;"></i>Hàng hoá</b><i class="fas fa-angle-down" style="margin: 10px;"></i></a>
+                                <div class="dropdown-container" id="dropdown2">
+                                    <a href="index.php?act=addhh">Thêm mới hàng hoá</a>
+                                    <a href="index.php?act=listhh">Danh sách hàng hoá</a>
+                                </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-user" style="margin: 10px;"></i><b>Khách hàng</b></a>
+                                <a class="nav-link" href="#"><i class="fas fa-user" style="margin: 10px; margin-left: 30px;"></i><b>Khách hàng</b></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fas fa-comment-dots" style="margin: 10px;"></i><b>Bình luận</b></a>

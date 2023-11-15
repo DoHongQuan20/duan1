@@ -42,7 +42,7 @@
 
             <?php } else { ?>
               <?php if (isset($_SESSION['user']['role']) == 1) { ?>
-                <li><a class="dropdown-item pl-3 py-2" href="admin/index.php">Quản trị admin</a></li>
+                <li><a class="dropdown-item pl-3 py-2" href="admin/index.php"> Trang quản trị </a></li>
               <?php } ?>
               <li><a class="dropdown-item pl-3 py-2" href="#">Cập nhật tài khoản</a></li>
               <li><a class="dropdown-item pl-3 py-2" href="#">Đổi mật khẩu</a></li>
@@ -84,7 +84,7 @@
         <div class="right-boxes">
           <ul>
             <li><a href="index.php"><i class="fas fa-home"></i>Trang Chủ</a></li>
-            <li><a href="index.php?act=sanpham">Sản Phẩm</a></li>
+            <li><a  href="index.php?act=sanpham">Sản Phẩm</a></li>
             <li><a href="index.php?act=gioithieu">Giới Thiệu</a></li>
             <li><a href="index.php?act=lienhe">Liên Hệ</a></li>
           </ul>
