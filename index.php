@@ -1,8 +1,13 @@
 <?php
 session_start();
 include "admin/model/taikhoan.php";
+include "admin/model/hanghoa.php";
 include "admin/model/pdo.php";
 include "view/header.php";
+include "global.php";
+
+$hanghoa_new = loadall_hanghoa_home();
+$ds_top10 = loadall_hanghoa_top10();
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {

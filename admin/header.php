@@ -51,7 +51,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-user" style="margin: 10px; margin-left: 30px;"></i><b>Khách hàng</b></a>
+                                <a class="nav-link" href="index.php?act=khachhang"><i class="fas fa-user" style="margin: 10px; margin-left: 30px;"></i><b>Khách hàng</b></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fas fa-comment-dots" style="margin: 10px;"></i><b>Bình luận</b></a>

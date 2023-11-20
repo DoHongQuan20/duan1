@@ -28,7 +28,7 @@
       extract($hanghoa);
       $suahh = "index.php?act=suahh&mahh=" . $mahh;
       $xoahh = "index.php?act=xoahh&mahh=" . $mahh;
-      $hinhpath = "uploads/" . $hinhanh;
+      $hinhpath = "../uploads/" . $hinhanh;
       if (is_file($hinhpath)) {
         $hinhanh = "<img src='" . $hinhpath . "' height='50px'>";
       } else {

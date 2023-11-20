@@ -3,6 +3,7 @@ include "header.php";
 include "model/pdo.php";
 include "model/danhmuc.php";
 include "model/hanghoa.php";
+include "model/taikhoan.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
@@ -53,7 +54,7 @@ if (isset($_GET['act'])) {
                 $dongia = $_POST['dongia'];
                 $hinhanh = $_FILES['hinhanh']['name'];
                 $mota = $_POST['mota'];
-                $target_dir = "uploads/";
+                $target_dir = "../uploads/";
                 $target_file = $target_dir . basename($_FILES['hinhanh']['name']);
                 if (move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file)) {
                     //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
@@ -112,7 +113,7 @@ if (isset($_GET['act'])) {
                 $dongia = $_POST['dongia'];
                 $hinhanh = $_FILES['hinhanh']['name'];
                 $mota = $_POST['mota'];
-                $target_dir = "uploads/";
+                $target_dir = "../uploads/";
                 $target_file = $target_dir . basename($_FILES['hinhanh']['name']);
                 if (move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file)) {
                     //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
@@ -132,6 +133,10 @@ if (isset($_GET['act'])) {
             $listdm = loadall_danhmuc();
             $listhh = loadall_hanghoa($key, $iddm);
             include "hanghoa/list.php";
+            break;
+        case 'khachhang':
+            $listtk=loadall_taikhoan();
+            include "taikhoan/list.php";
             break;
     }
 } else {
