@@ -3,18 +3,16 @@
     <div class="col-md-3 hnh">
       <div class="danhmuc">
         <ul class="list-group">
-          <li class="list-group-item"><a href="#">Điện thoại Iphone</a></li>
-          <li class="list-group-item"><a href="#">Điện thoại Samsung</a></li>
-          <li class="list-group-item"><a href="#">Điện thoại Oppo</a></li>
-          <li class="list-group-item"><a href="#">Điện thoại Nokia</a></li>
-          <li class="list-group-item"><a href="#">Điện thoại Vivo</a></li>
-          <li class="list-group-item"><a href="#">Điện thoại Sony</a></li>
-          <li class="list-group-item"><a href="#">Điện thoại Tai nghe</a></li>
-          <li class="list-group-item"><a href="#">Điện thoại Phụ kiện</a></li>
+          <?php
+          foreach ($ds_dm as $dm) {
+            extract($dm);
+            $link_dm = "index.php?act=hanghoa&iddm=" . $madm;
+            echo '<li class="list-group-item"><a  href="' . $link_dm . '">' . $tendm . '</a></li>';
+          }
+          ?>
+
         </ul>
       </div>
-
-
 
     </div>
 
@@ -86,78 +84,31 @@
       $hinhanh = $img_path . $hinhanh;
       $link_hh = "index.php?act=ctsanpham&mahh=" . $mahh;
       echo '<div class="boxsp" data-aos="fade-up" data-aos-duration="2000" style="margin-bottom: 20px;">
-      <a href="'. $link_hh.'"><img src="'.$hinhanh.'" alt="Điện thoại 3"></a>
-      <div class="name"><a href="#">'.$tenhh.'</a></div>
-      <p>'.$dongia.'</p><br>
+      <a href="' . $link_hh . '"><img src="' . $hinhanh . '" alt="Điện thoại 3"></a>
+      <div class="name"><a href="#">' . $tenhh . '</a></div>
+      <p>' . $dongia . '</p><br>
       <a href=""><input type="button" value="Add to cart"></a>
     </div>';
     }
     ?>
   </div>
-  <div class="phone-list-container">
+  <div class="phone-list-container" >
     <h1 class="phone-list-title">Top 10 yêu thích</h1>
     <div class="phone-list-wrapper">
       <div class="phone-list">
-        <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-          <div class="name"><a href="#">Apple Watch seri3</a></div>
-          <p>$5900</p>
-          <a href=""><input type="button" value="Add to cart"></a>
-        </div>
-        <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-          <div class="name"><a href="#">Apple Watch seri3</a></div>
-          <p>$5900</p>
-          <a href=""><input type="button" value="Add to cart"></a>
-        </div>
-        <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-          <div class="name"><a href="#">Apple Watch seri3</a></div>
-          <p>$5900</p>
-          <a href=""><input type="button" value="Add to cart"></a>
-        </div>
-        <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-          <div class="name"><a href="#">Apple Watch seri3</a></div>
-          <p>$5900</p>
-          <a href=""><input type="button" value="Add to cart"></a>
-        </div>
-        <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-          <div class="name"><a href="#">Apple Watch seri3</a></div>
-          <p>$5900</p>
-          <a href=""><input type="button" value="Add to cart"></a>
-        </div>
-        <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-          <div class="name"><a href="#">Apple Watch seri3</a></div>
-          <p>$5900</p>
-          <a href=""><input type="button" value="Add to cart"></a>
-        </div>
-        <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-          <div class="name"><a href="#">Apple Watch seri3</a></div>
-          <p>$5900</p>
-          <a href=""><input type="button" value="Add to cart"></a>
-        </div>
-        <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-          <div class="name"><a href="#">Apple Watch seri3</a></div>
-          <p>$5900</p>
-          <a href=""><input type="button" value="Add to cart"></a>
-        </div>
-        <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-          <div class="name"><a href="#">Apple Watch seri3</a></div>
-          <p>$5900</p>
-          <a href=""><input type="button" value="Add to cart"></a>
-        </div>
-        <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-          <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-          <div class="name"><a href="#">Apple Watch seri3</a></div>
-          <p>$5900</p>
-          <a href=""><input type="button" value="Add to cart"></a>
-        </div>
+        <?php
+        foreach ($ds_top10 as $hh) {
+          extract($hh);
+          $link_hh = "index.php?act=hanghoact&ma_hh=" . $mahh;
+          $hinhanh = $img_path . $hinhanh;
+          echo '<div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
+                <a href=""><img src="'.$hinhanh.'" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
+                <div class="name" style="text-align: center;"><a href="#">'.$tenhh.'</a></div>
+                <p>'.$dongia.'</p>
+                <a href=""><input type="button" value="Add to cart"></a>
+              </div>';
+        }
+        ?>
       </div>
       <i class="fas fa-chevron-right arrow"></i>
     </div>

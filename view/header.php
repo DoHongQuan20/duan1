@@ -20,8 +20,10 @@
     <div class="header">
       <div class="logo"><img src="./img/logo.jpg" alt="" /></div>
       <div class="search-container">
-        <input type="text" placeholder="Search..." />
-        <button type="submit" class="btn btn-danger">Search</button>
+        <form action="index.php?act=hanghoa" method="post">
+          <input type="text" name="key" placeholder="Search..." />
+          <button type="submit"  name="timkiem" class="btn btn-danger">Search</button>
+        </form>
       </div>
       <?php
       if (isset($_SESSION['user'])) {
@@ -85,7 +87,7 @@
         <div class="right-boxes">
           <ul>
             <li><a href="index.php"><i class="fas fa-home"></i>Trang Chủ</a></li>
-            <li><a  href="index.php?act=sanpham">Sản Phẩm</a></li>
+            <li><a href="index.php?act=sanpham">Sản Phẩm</a></li>
             <li><a href="index.php?act=gioithieu">Giới Thiệu</a></li>
             <li><a href="index.php?act=lienhe">Liên Hệ</a></li>
           </ul>

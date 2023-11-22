@@ -268,34 +268,47 @@
         <div class="card">
             <div class="container-fliud">
                 <div class="wrapper row">
-                    <div class="preview col-md-6">
+                    <?php
+                    extract($one_hh);
+                    $hinh = $img_path . $hinhanh;
+                    echo '<div class="preview col-md-6">
                         <div class="preview-pic tab-content">
-                            <div class="tab-pane active" id="pic-1"><img src="img/ip14promax.jpg" alt="">
+                            <div class="tab-pane active" ><img src="' . $hinh . '" alt="">
                             </div>
 
                         </div>
 
+                    </div>';
+                    echo '<div class="details col-md-6">
+                    <h3 class="product-title" style="margin-top: 30px;">' . $tenhh . '</h3>
+                    <div class="rating" style="margin-left: -3px;">
+                        <div class="stars"> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
+                        </div> <span class="review-no">123 đánh giá</span>
                     </div>
-                    <div class="details col-md-6">
-                        <h3 class="product-title" style="margin-top: 30px;">Iphone 15 Pro Max</h3>
-                        <div class="rating" style="margin-left: -3px;">
-                            <div class="stars"> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
-                            </div> <span class="review-no">123 đánh giá</span>
-                        </div>
-                        <p class="product-description" style="margin-left: 3px;">Mô tả ở đây</p>
-                        <h4 class="price">Giá bán: 200.000 đ</h4>
-                        <p class="vote"><strong>91%</strong> of người mua hài lòng với sản phẩm này <strong>(87 bình chọn)</strong>
-                        </p>
-                        <div class="action"> <a href=""><button style="margin-bottom: 180px;" class="add-to-cart btn btn-default" type="button">MUA NGAY</button>
-                                <button style="margin-bottom: 180px;" class="add-to-cart btn btn-default" type="button">THÊM VÀO GIỎ HÀNG
-                        </div>
+                    <p class="product-description" style="margin-left: 3px;">' . $mota . '</p>
+                    <h4 class="price">' . $dongia . '</h4>
+                    <p class="vote"><strong>91%</strong> of người mua hài lòng với sản phẩm này <strong>(87 bình chọn)</strong>
+                    </p>
+                    <div class="action"> <a href=""><button style="margin-bottom: 180px;" class="add-to-cart btn btn-default" type="button">MUA NGAY</button>
+                            <button style="margin-bottom: 180px;" class="add-to-cart btn btn-default" type="button">THÊM VÀO GIỎ HÀNG
                     </div>
+                </div>';
+
+                    ?>
                 </div>
             </div>
 
         </div>
 
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $("#binhluan").load("view/binhluan/formbinhluan.php", {
+                        idpro: <?= $mahh ?>
+                    });
+                });
+            </script>
     <div class="rom ml">
         <div class="boxtitler">
             <h4>Bình luận</h4>
@@ -308,66 +321,19 @@
         <h1 class="phone-list-title" style="margin-top: -25px; height:58px ;">Sản phẩm tương tự</h1>
         <div class="phone-list-wrapper">
             <div class="phone-list" style="margin-top: -60px; height: 420px;">
-                <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-                    <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-                    <div class="name"><a href="#">Apple Watch seri3</a></div>
-                    <p>$5900</p>
-                    <a href=""><input type="button" value="Add to cart"></a>
-                </div>
-                <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-                    <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-                    <div class="name"><a href="#">Apple Watch seri3</a></div>
-                    <p>$5900</p>
-                    <a href=""><input type="button" value="Add to cart"></a>
-                </div>
-                <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-                    <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-                    <div class="name"><a href="#">Apple Watch seri3</a></div>
-                    <p>$5900</p>
-                    <a href=""><input type="button" value="Add to cart"></a>
-                </div>
-                <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-                    <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-                    <div class="name"><a href="#">Apple Watch seri3</a></div>
-                    <p>$5900</p>
-                    <a href=""><input type="button" value="Add to cart"></a>
-                </div>
-                <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-                    <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-                    <div class="name"><a href="#">Apple Watch seri3</a></div>
-                    <p>$5900</p>
-                    <a href=""><input type="button" value="Add to cart"></a>
-                </div>
-                <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-                    <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-                    <div class="name"><a href="#">Apple Watch seri3</a></div>
-                    <p>$5900</p>
-                    <a href=""><input type="button" value="Add to cart"></a>
-                </div>
-                <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-                    <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-                    <div class="name"><a href="#">Apple Watch seri3</a></div>
-                    <p>$5900</p>
-                    <a href=""><input type="button" value="Add to cart"></a>
-                </div>
-                <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-                    <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-                    <div class="name"><a href="#">Apple Watch seri3</a></div>
-                    <p>$5900</p>
-                    <a href=""><input type="button" value="Add to cart"></a>
-                </div>
-                <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-                    <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-                    <div class="name"><a href="#">Apple Watch seri3</a></div>
-                    <p>$5900</p>
-                    <a href=""><input type="button" value="Add to cart"></a>
-                </div>
-                <div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-                    <a href=""><img src="./img/ip14promax.jpg" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-                    <div class="name"><a href="#">Apple Watch seri3</a></div>
-                    <p>$5900</p>
-                    <a href=""><input type="button" value="Add to cart"></a>
-                </div>
+                <?php
+                foreach ($hh_cung_loai as $hh_cung_loai) {
+                    extract($hh_cung_loai);
+                    $linkhh = "index.php?act=ctsanpham&mahh=" . $mahh;
+                    $hinhanh = $img_path . $hinhanh;
+                    echo '<div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
+                <a href=""><img src="' . $hinhanh . '" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
+                <div class="name" style="text-align: center;"><a href="#">' . $tenhh . '</a></div>
+                <p>' . $dongia . '</p>
+                <a href=""><input type="button" value="Add to cart"></a>
+              </div>';
+                }
+                ?>
             </div>
             <i class="fas fa-chevron-right arrow"></i>
         </div>
