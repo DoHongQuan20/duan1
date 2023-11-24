@@ -66,9 +66,9 @@
 
                     </ul>
                     <div class="duoi">
-                        <b class="nav-item">
+                        <!-- <b class="nav-item">
                             <p>Copy by Do Hong Quan @2023</p>
-                        </b>
+                        </b> -->
                     </div>
                 </div>
 

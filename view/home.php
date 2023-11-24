@@ -86,7 +86,7 @@
       echo '<div class="boxsp" data-aos="fade-up" data-aos-duration="2000" style="margin-bottom: 20px;">
       <a href="' . $link_hh . '"><img src="' . $hinhanh . '" alt="Điện thoại 3"></a>
       <div class="name"><a href="#">' . $tenhh . '</a></div>
-      <p>' . $dongia . '</p><br>
+      <p>' . $dongia . ' VNĐ</p><br>
       <a href=""><input type="button" value="Add to cart"></a>
     </div>';
     }
@@ -95,17 +95,17 @@
   <div class="phone-list-container" >
     <h1 class="phone-list-title">Top 10 yêu thích</h1>
     <div class="phone-list-wrapper">
-      <div class="phone-list">
+      <div class="phone-list" >
         <?php
         foreach ($ds_top10 as $hh) {
           extract($hh);
           $link_hh = "index.php?act=hanghoact&ma_hh=" . $mahh;
           $hinhanh = $img_path . $hinhanh;
-          echo '<div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
+          echo '<div class="phone-list-item"  data-aos="fade-up" data-aos-duration="2000">
                 <a href=""><img src="'.$hinhanh.'" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
                 <div class="name" style="text-align: center;"><a href="#">'.$tenhh.'</a></div>
-                <p>'.$dongia.'</p>
-                <a href=""><input type="button" value="Add to cart"></a>
+                <p>'.$dongia.' VNĐ</p>
+                <a href="" ><input type="button" value="Add to cart"></a>
               </div>';
         }
         ?>
