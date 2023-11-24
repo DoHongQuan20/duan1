@@ -1,7 +1,7 @@
 <?php
-function insert_binhluan($noidung, $iduser, $idpro, $ngaybinhluan)
+function insert_binhluan($noidung, $iduser,$nameuser, $idpro, $ngaybinhluan)
 {
-    $sql = "INSERT INTO binhluan(noidung,iduser,idpro,ngaybinhluan) VALUES('$noidung','$iduser','$idpro','$ngaybinhluan')";
+    $sql = "INSERT INTO binhluan(noidung,iduser,nameuser,idpro,ngaybinhluan) VALUES('$noidung','$iduser','$nameuser','$idpro','$ngaybinhluan')";
     pdo_execute($sql);
 }
 function loadall_binhluan($idpro)

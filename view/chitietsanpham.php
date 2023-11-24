@@ -1,341 +1,200 @@
-<style>
-    .preview {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-    @media screen and (max-width: 996px) {
-        .preview {
-            margin-bottom: 20px;
-        }
-    }
-
-    .preview-pic {
-        -webkit-box-flex: 1;
-        -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
-    }
-
-    .preview-thumbnail.nav-tabs {
-        border: none;
-        margin-top: 15px;
-    }
-
-    .preview-thumbnail.nav-tabs li {
-        width: 18%;
-        margin-right: 2.5%;
-    }
-
-    .preview-thumbnail.nav-tabs li img {
-        max-width: 100%;
-        display: block;
-    }
-
-    .preview-thumbnail.nav-tabs li a {
-        padding: 0;
-        margin: 0;
-        cursor: pointer;
-    }
-
-    .preview-thumbnail.nav-tabs li:last-of-type {
-        margin-right: 0;
-    }
-
-    .tab-content {
-        overflow: hidden;
-    }
-
-    .tab-content img {
-        width: 100%;
-        -webkit-animation-name: opacity;
-        animation-name: opacity;
-        -webkit-animation-duration: .3s;
-        animation-duration: .3s;
-    }
-
-    .card {
-        margin-top: 0px;
-        background: #ffffff;
-        padding: 3em;
-        line-height: 1.5em;
-    }
-
-    @media screen and (min-width: 997px) {
-        .wrapper {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-        }
-    }
-
-    .details {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-
-    .colors {
-        -webkit-box-flex: 1;
-        -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
-    }
-
-    .product-title,
-    .price,
-    .sizes,
-    .colors {
-        text-transform: UPPERCASE;
-        font-weight: bold;
-    }
-
-    .checked,
-    .price span {
-        color: #C9302C;
-    }
-
-    .product-title,
-    .rating,
-    .product-description,
-    .price,
-    .vote,
-    .sizes {
-        margin-bottom: 15px;
-    }
-
-    .product-title {
-        margin-top: 0;
-    }
-
-    .size {
-        margin-right: 10px;
-    }
-
-    .size:first-of-type {
-        margin-left: 40px;
-    }
-
-    .color {
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 10px;
-        height: 2em;
-        width: 2em;
-        border-radius: 2px;
-    }
-
-    .color:first-of-type {
-        margin-left: 20px;
-    }
-
-    .add-to-cart,
-    .like {
-        background: #DC3545;
-        padding: 1.2em 1.5em;
-        border: none;
-        text-transform: UPPERCASE;
-        font-weight: bold;
-        color: #fff;
-        text-decoration: none;
-        -webkit-transition: background .3s ease;
-        transition: background .3s ease;
-    }
-
-    .add-to-cart:hover,
-    .like:hover {
-        background: #C9302C;
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .not-available {
-        text-align: center;
-        line-height: 2em;
-    }
-
-    .not-available:before {
-        font-family: fontawesome;
-        content: "\f00d";
-        color: #fff;
-    }
-
-    .orange {
-        background: #ff9f1a;
-    }
-
-    .green {
-        background: #85ad00;
-    }
-
-    .blue {
-        background: #0076ad;
-    }
-
-    .tooltip-inner {
-        padding: 1.3em;
-    }
-
-    @-webkit-keyframes opacity {
-        0% {
-            opacity: 0;
-            -webkit-transform: scale(3);
-            transform: scale(3);
-        }
-
-        100% {
-            opacity: 1;
-            -webkit-transform: scale(1);
-            transform: scale(1);
-        }
-    }
-
-    @keyframes opacity {
-        0% {
-            opacity: 0;
-            -webkit-transform: scale(3);
-            transform: scale(3);
-        }
-
-        100% {
-            opacity: 1;
-            -webkit-transform: scale(1);
-            transform: scale(1);
-        }
-    }
-
-    .rom {
-        width: 100%;
-        /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ */
-        height: 250px;
-
-        margin-left: 0;
-    }
-
-    .boxtrai1 {
-
-
-        width: 100%;
-    }
-
-
-    .mc {
-        margin-right: 2%;
-    }
-
-
-
-    .boxtitler {
-        color: #ffffff;
-        padding: 3px;
-        background-color: #DC3545;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border: 1px #ccc solid;
-    }
-
-    .boxcontentn {
-        border-left: #ccc solid;
-        border-right: #ccc solid;
-        border-bottom: #ccc solid;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        min-height: 200px;
-        padding: 15px;
-        border: 1px #ccc solid;
-    }
-</style>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
 <body>
+    <style>
+        .container1 {
+            width: 1000px;
+            border: 1px #9e9e9e solid;
+            margin: auto;
+            padding: 0;
+            height: 600px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
 
-    <div class="container" style="height: 670px;">
-        <div class="card">
-            <div class="container-fliud">
-                <div class="wrapper row">
-                    <?php
-                    extract($one_hh);
-                    $hinh = $img_path . $hinhanh;
-                    echo '<div class="preview col-md-6">
-                        <div class="preview-pic tab-content">
-                            <div class="tab-pane active" ><img src="' . $hinh . '" alt="">
-                            </div>
+        .container2 {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: row;
+            height: 500px;
+        }
 
-                        </div>
+        .product-image img {
+            width: 500px;
+            height: 500px;
+            display: block;
+        }
 
+        .product-details {
+            padding: 20px;
+        }
+
+        .product-details h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .product-details p {
+            margin-bottom: 15px;
+        }
+
+        .product-details .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #c9302c;
+            margin-bottom: 15px;
+        }
+
+        .product-details .description {
+            margin-bottom: 20px;
+        }
+
+        .product-details .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #c9302c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-details .btn:hover {
+            background-color: #9c2023;
+        }
+
+        .rom {
+            width: 100%;
+            /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+            height: 250px;
+
+            margin-left: 0;
+            margin-bottom: 100px;
+        }
+
+        .boxtrai1 {
+
+
+            width: 100%;
+        }
+
+
+        .mc {
+            margin-right: 2%;
+        }
+
+
+
+        .boxtitler {
+            color: #ffffff;
+            padding: 3px;
+            background-color: #DC3545;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border: 1px #ccc solid;
+        }
+
+        .boxcontentn {
+            border-left: #ccc solid;
+            border-right: #ccc solid;
+            border-bottom: #ccc solid;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            min-height: 180px;
+            padding: 15px;
+            border: 1px #ccc solid;
+        }
+    </style>
+
+    </head>
+
+    <body>
+        <div class="container1">
+            <div class="container2">
+                <?php
+                extract($one_hh);
+                $hinh = $img_path . $hinhanh;
+                echo '<div class="product-image">
+                        <img src="' . $hinh . '" alt="Product Image" />
                     </div>';
-                    echo '<div class="details col-md-6">
-                    <h3 class="product-title" style="margin-top: 30px;">' . $tenhh . '</h3>
-                    <div class="rating" style="margin-left: -3px;">
-                        <div class="stars"> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
-                        </div> <span class="review-no">123 đánh giá</span>
+                echo '<div class="product-details" >
+                <h1><b>'.$tenhh.'</b></h1>
+                <p class="price">'.$dongia.' VNĐ</p>
+                <div class="rating" style="margin-left: -3px">
+                    <div class="stars">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span> <span class="fa fa-star"></span>
                     </div>
-                    <p class="product-description" style="margin-left: 3px;">' . $mota . '</p>
-                    <h4 class="price">' . $dongia . '</h4>
-                    <p class="vote"><strong>91%</strong> of người mua hài lòng với sản phẩm này <strong>(87 bình chọn)</strong>
-                    </p>
-                    <div class="action"> <a href=""><button style="margin-bottom: 180px;" class="add-to-cart btn btn-default" type="button">MUA NGAY</button>
-                            <button style="margin-bottom: 180px;" class="add-to-cart btn btn-default" type="button">THÊM VÀO GIỎ HÀNG
-                    </div>
-                </div>';
-
-                    ?>
+                    <span class="review-no">123 đánh giá</span>
                 </div>
+                <span class="review-no" style="margin-left: 5px">Lượt xem : '.$luotxem.'</span>
+                <p class="description" style="margin-left: 5px">
+                   Mô tả : '.$mota.'
+                </p>
+                <a href="#" style="margin-left: 5px" class="btn">MUA NGAY</a>
+            </div>
+';
+
+                ?>
+
+
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#binhluan").load("view/binhluan/formbinhluan.php", {
+                    idpro: <?= $mahh ?>
+                });
+            });
+        </script>
+        <div class="rom ml">
+            <div class="boxtitler">
+                <h4>Bình luận</h4>
+            </div>
+            <div class="boxcontentn" id="binhluan">
             </div>
 
         </div>
-
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-            <script>
-                $(document).ready(function() {
-                    $("#binhluan").load("view/binhluan/formbinhluan.php", {
-                        idpro: <?= $mahh ?>
-                    });
-                });
-            </script>
-    <div class="rom ml">
-        <div class="boxtitler">
-            <h4>Bình luận</h4>
-        </div>
-        <div class="boxcontentn" id="binhluan">
-        </div>
-
-    </div>
-    <div class="phone-list-container" style="height: 480px;">
-        <h1 class="phone-list-title" style="margin-top: -25px; height:58px ;">Sản phẩm tương tự</h1>
-        <div class="phone-list-wrapper">
-            <div class="phone-list" style="margin-top: -60px; height: 420px;">
-                <?php
-                foreach ($hh_cung_loai as $hh_cung_loai) {
-                    extract($hh_cung_loai);
-                    $linkhh = "index.php?act=ctsanpham&mahh=" . $mahh;
-                    $hinhanh = $img_path . $hinhanh;
-                    echo '<div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
+        <div class="phone-list-container" style="height: 480px;">
+            <h1 class="phone-list-title" style=" height:58px ;">Sản phẩm tương tự</h1>
+            <div class="phone-list-wrapper">
+                <div class="phone-list" style=" height: 420px;">
+                    <?php
+                    foreach ($hh_cung_loai as $hh_cung_loai) {
+                        extract($hh_cung_loai);
+                        $linkhh = "index.php?act=ctsanpham&mahh=" . $mahh;
+                        $hinhanh = $img_path . $hinhanh;
+                        echo '<div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
                 <a href=""><img src="' . $hinhanh . '" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
                 <div class="name" style="text-align: center;"><a href="#">' . $tenhh . '</a></div>
                 <p>' . $dongia . '</p>
                 <a href=""><input type="button" value="Add to cart"></a>
               </div>';
-                }
-                ?>
+                    }
+                    ?>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
             </div>
-            <i class="fas fa-chevron-right arrow"></i>
+            <script src="js/app.js"></script>
+
         </div>
-        <script src="js/app.js"></script>
-    </div>
+    </body>
+
+</html>

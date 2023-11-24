@@ -38,20 +38,32 @@
 
   </div>
 
-  <div class="col-md-8 hnh2" style="margin-left: -120px;margin-top: 10px;">
+  <div class="col-md-9 hnh2" style="margin-left: -80px;margin-top: 10px;">
     <div class="top-content">
-      <div class="row sp" style="display: flex;flex-direction: row;">
-        <div class="boxsp" data-aos="fade-up" data-aos-duration="2000" style="width: 210px;">
+      <div class="row sp" style="display: flex;flex-direction: row;  ">
+        <div class="boxsp" data-aos="fade-up" data-aos-duration="2000" style="width: 230px; margin-bottom: 20px;">
           <a href="index.php?act=ctsanpham"><img src="./img/ip14promax.jpg" alt="Điện thoại 3"></a>
           <div class="name"><a href="#">Apple Watch seri3</a></div>
           <p>$5900</p><br>
-          <a href=""><input type="button" value="Add to cart" style="margin-left:57px;"></a>
+          <a href=""><input type="button" value="Add to cart" style="margin-left:68px;"></a>
         </div>
-        <div class="boxsp" data-aos="fade-up" data-aos-duration="2000" style="width: 210px;">
+        <div class="boxsp" data-aos="fade-up" data-aos-duration="2000" style="width: 230px;">
           <a href=""><img src="./img/ip14promax.jpg" alt="Điện thoại 3"></a>
           <div class="name"><a href="#">Apple Watch seri3</a></div>
           <p>$5900</p><br>
-          <a href=""><input type="button" value="Add to cart" style="margin-left:57px;"></a>
+          <a href=""><input type="button" value="Add to cart" style="margin-left:68px;"></a>
+        </div>
+        <div class="boxsp" data-aos="fade-up" data-aos-duration="2000" style="width: 230px;">
+          <a href=""><img src="./img/ip14promax.jpg" alt="Điện thoại 3"></a>
+          <div class="name"><a href="#">Apple Watch seri3</a></div>
+          <p>$5900</p><br>
+          <a href=""><input type="button" value="Add to cart" style="margin-left:68px;"></a>
+        </div>
+        <div class="boxsp" data-aos="fade-up" data-aos-duration="2000" style="width: 230px;">
+          <a href=""><img src="./img/ip14promax.jpg" alt="Điện thoại 3"></a>
+          <div class="name"><a href="#">Apple Watch seri3</a></div>
+          <p>$5900</p><br>
+          <a href=""><input type="button" value="Add to cart" style="margin-left:68px;"></a>
         </div>
 
       </div>

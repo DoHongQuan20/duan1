@@ -25,7 +25,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $iddm = 0;
             }
             $ds_hh = loadall_hanghoa($key, $iddm);
-            $ten_dm = load_ten_danhmuc($iddm);
+            $tendm = load_ten_danhmuc($iddm);
             include "view/hanghoa.php";
             break;
         case 'gioithieu':
@@ -85,7 +85,21 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 break;
             include "view/chitietsanpham.php";
             break;
-
+            case 'sanpham':
+                if (isset($_POST['key']) && ($_POST['key']) != "") {
+                    $key = $_POST['key'];
+                } else {
+                    $key = "";
+                }
+                if (isset($_GET['iddm']) && ($_GET['iddm']) > 0) {
+                    $iddm = $_GET['iddm'];
+                } else {
+                    $iddm = 0;
+                }
+                $ds_hh = loadall_hanghoa($key, $iddm);
+                $tendm = load_ten_danhmuc($iddm);
+                include "view/sanpham.php";
+                break;
         default:
             include "view/home.php";
             break;

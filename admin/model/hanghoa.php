@@ -20,7 +20,7 @@ function loadall_hanghoa_top10()
 
 function loadall_hanghoa_home()
 {
-    $sql = "SELECT * from hanghoa where 1 order by mahh desc limit 0,9";
+    $sql = "SELECT * from hanghoa where 1 order by mahh desc limit 15";
     $listhh = pdo_query($sql);
     return $listhh;
 }
