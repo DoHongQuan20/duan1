@@ -15,8 +15,8 @@
             <?php
             foreach ($listtk as $taikhoan) {
                 extract($taikhoan);
-                $suatk = "index.php?act=suadm&matk=" . $id;
-                $xoatk = "index.php?act=xoadm&matk=" . $id;
+                $suatk = "index.php?act=suakh&id=" .$id;
+                $xoatk = "index.php?act=xoakh&id=" .$id;
                 echo
                 '<tr>
                            

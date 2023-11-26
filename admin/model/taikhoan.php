@@ -41,3 +41,9 @@ function loadall_taikhoan(){
     return $listtk;
 }
 
+function  delete_taikhoan($id)
+{
+    $sql = "delete from taikhoan where id=" . $id;
+    pdo_execute($sql);
+}
+

@@ -4,6 +4,7 @@ include "model/pdo.php";
 include "model/danhmuc.php";
 include "model/hanghoa.php";
 include "model/taikhoan.php";
+include "model/binhluan.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
@@ -135,8 +136,34 @@ if (isset($_GET['act'])) {
             include "hanghoa/list.php";
             break;
         case 'khachhang':
-            $listtk=loadall_taikhoan();
+            $listtk = loadall_taikhoan();
             include "taikhoan/list.php";
+            break;
+        case 'xoakh':
+            if ($_GET['id'] && $_GET['id'] > 0) {
+                delete_taikhoan($_GET['id']);
+            }
+            $listtk = loadall_taikhoan(0);
+            include "taikhoan/list.php";
+            break;
+        case 'dsbl':
+            $listbl = loadall_binhluan(0);
+            include "binhluan/list.php";
+            break;
+        case 'xoabl':
+            if ($_GET['id'] && $_GET['id'] > 0) {
+                delete_binhluan($_GET['id']);
+            }
+            $listbl = loadall_binhluan(0);
+            include "binhluan/list.php";
+            break;
+        case 'thongke':
+            $listtk = loadall_thongke();
+            include "thongke/list.php";
+            break;
+        case 'bieudo':
+            $listthongke = loadall_thongke();
+            include "thongke/bieudo.php";
             break;
     }
 } else {

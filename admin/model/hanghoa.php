@@ -74,3 +74,12 @@ function update_hanghoa($mahh, $iddm, $tenhh, $dongia, $hinhanh, $mota)
     }
     pdo_execute($sql);
 }
+
+function loadall_thongke()
+{
+    $sql = "select danhmuc.madm as madm, danhmuc.tendm as tendm,count(hanghoa.mahh) as counthh, min(hanghoa.dongia) as mindongia, max(hanghoa.dongia)as maxdongia, avg(hanghoa.dongia) as avgdongia";
+    $sql .= " from hanghoa left join danhmuc on danhmuc.madm=hanghoa.iddm";
+    $sql .= " group by danhmuc.madm order by danhmuc.madm desc";
+    $listtk = pdo_query($sql);
+    return $listtk;
+}

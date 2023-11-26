@@ -54,13 +54,13 @@
                                 <a class="nav-link" href="index.php?act=khachhang"><i class="fas fa-user" style="margin: 10px; margin-left: 30px;"></i><b>Khách hàng</b></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-comment-dots" style="margin: 10px;"></i><b>Bình luận</b></a>
+                                <a class="nav-link" href="index.php?act=dsbl"><i class="fas fa-comment-dots" style="margin: 10px;"></i><b>Bình luận</b></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fas fa-shopping-cart" style="margin: 10px;"></i><b>Đơn hàng</b></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-chart-bar" style="margin: 10px;"></i><b>Thống kê</b></a>
+                                <a class="nav-link" href="index.php?act=thongke"><i class="fas fa-chart-bar" style="margin: 10px;"></i><b>Thống kê</b></a>
                             </li>
                     </div>
 
