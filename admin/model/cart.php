@@ -2,7 +2,7 @@
 
 function viewcart($del)
 {
-    global $img_path;
+    global $img_patth;
     $i = 0;
     if ($del == 1) {
         $xoasp_th = '<th>Thao tác</th>';
@@ -11,44 +11,66 @@ function viewcart($del)
         $xoasp_th = '';
         $xoasp_td2 = '';
     }
-    echo '<tr>
-<th>hình</th>
-<th>sản phẩm</th>
-<th>đơn giá</th>
-<th>số lượng</th>
-<th>thành tiền </th>
-' . $xoasp_th . '
-
+    echo ' <tr>
+    <th style="width:50% ">
+        <h5>Tên sản phẩm</h5>
+    </th>
+    <th style="width:10%">
+        <h5>Giá</h5>
+    </th>
+    <th style="width:14%"><h5>Số lượng</h5></th>
+    <th style="width:18%" class="text-center"><h5>Thành tiền</h5></th>
+    <th style="width:14%">'.$xoasp_th.' </th>
 </tr>';
     $tong = 0;
     // var_dump($_SESSION['mycart']);
     foreach ($_SESSION['mycart'] as $cart) {
-        $hinh = $img_path . $cart[2];
+        $hinh = $img_patth . $cart[2];
         $ttien = $cart[3] * $cart[4];
         $tong += $ttien;
 
         if ($del == 1) {
-            $xoasp_td = '<td><a href="index.php?act=delcart&idcart=' . $i . '"><input type="button" value="xóa"></a></td>';
+            $xoasp_td = '<td><a  href="index.php?act=delcart&idcart=' . $i . '"><input style="margin-top: 30px;" type="button" class="btn btn-danger"  value="xóa"></a></td>';
         } else {
 
             $xoasp_td = '';
         }
         echo '
-    <tr>
-        <td><img src="' . $hinh . '" alt="" height="80px"></td>
-        <td>' . $cart[1] . '</td>
-        <td>' . $cart[3] . '</td>
-        <td>' . $cart[4] . '</td>
-        <td>' . $ttien . '</td>
-       ' . $xoasp_td . '
-    </tr>';
+    <tbody>
+        <tr>
+            <td data-th="Product">
+                <div class="row" >
+                    <div class="col-sm-3 hidden-xs" ">
+                        <img src="' . $hinh . '" alt="Sản phẩm 1" class="img-responsive" width="90" />
+                    </div>
+                    <div class="col-sm-9" >
+                        <h5 class="nomargin">' . $cart[1] . '</h5>
+                        <p>Mô tả của sản phẩm </p>
+                    </div>
+                </div>
+            </td>
+            <td data-th="Price">
+                <p style="margin-top: 30px;">' . $cart[3] . '</p>
+            </td>
+            <td data-th="Quantity">
+            <p style="margin-top: 30px;">' . $cart[4] . '</p>
+            </td>
+            <td data-th="Subtotal" class="text-center">
+                <p style="margin-top: 30px;">' . $ttien . '</p>
+            </td>
+            <td class="actions" data-th="">
+                ' . $xoasp_td. '
+            </td>
+        </tr>
+    </tbody>
+    ';
         $i += 1;
     }
     echo '<tr>
-    <td colspan="4">tổng đơn hàng</td>
+    <td colspan="4"><b>Tổng đơn hàng</b></td>
   
-    <td>' . $tong . '</td>
-    ' . $xoasp_td2 . '
+    <td><b>' . $tong . '</b></td>
+   ' . $xoasp_td2 . '
   <td></td>
 </tr>';
 }
@@ -111,19 +133,19 @@ function insert_cart($iduser, $idpro, $img, $name, $price, $soluong, $thanhtien,
 }
 function loadone_bill($id)
 {
-    $sql = "select * from bill where id='$id'";
+    $sql = "select * from bill where id=" . $id;
     $bill = pdo_query_one($sql);
     return $bill;
 }
 function loadall_cart($idbill)
 {
-    $sql = "select * from cart where idbill='$idbill'" ;
+    $sql = "select * from cart where idbill=" . $idbill;
     $bill = pdo_query($sql);
     return $bill;
 }
 function loadall_cart_count($idbill)
 {
-    $sql = "select * from cart where idbill='$idbill'" ;
+    $sql = "select * from cart where idbill=" . $idbill;
     $bill = pdo_query($sql);
     return sizeof($bill);
 }
@@ -157,11 +179,4 @@ function get_ttdh($n)
     }
     return $tt;
 }
-function loadall_thongke()
-{
-    $sql = "select danhmuc.ma_loai as madm, danhmuc.ten_loai as tendm,count(hanghoa.ma_hh) as counthh, min(hanghoa.don_gia) as mindon_gia, max(hanghoa.don_gia)as maxdon_gia, avg(hanghoa.don_gia) as avgdon_gia";
-    $sql .= " from hanghoa left join danhmuc on danhmuc.ma_loai=hanghoa.id_dm";
-    $sql .= " group by danhmuc.ma_loai order by danhmuc.ma_loai desc";
-    $listtk = pdo_query($sql);
-    return $listtk;
-}
+    ?>

@@ -70,7 +70,7 @@
       <div class="taikhoan">
         <ul class="list-inline">
 
-          <li><a href="index.php?act=giohang"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a></li>
+          <li><a href="index.php?act=addtocart"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a></li>
         </ul>
       </div>
     </div>

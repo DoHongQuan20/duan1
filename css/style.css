@@ -322,7 +322,7 @@
                 transform: scale(1.1);
             }
             
-            .boxsp input[type="button"] {
+            .boxsp input[type="submit"] {
                 position: absolute;
                 border-radius: 30px;
                 height: 30px;
@@ -334,7 +334,7 @@
                 border: 1px rgb(0, 136, 255) solid;
             }
             
-            .boxsp input[type="button"]:hover {
+            .boxsp input[type="submit"]:hover {
                 color: #ffffff;
                 background-color: rgb(74, 163, 240);
             }
