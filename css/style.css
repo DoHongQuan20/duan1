@@ -541,7 +541,7 @@
                 margin-top: -10px;
             }
             
-            .phone-list-item input[type="button"] {
+            .phone-list-item input[type="submit"] {
                 position: absolute;
                 border-radius: 30px;
                 height: 30px;
@@ -553,7 +553,7 @@
                 border: 1px rgb(0, 136, 255) solid;
             }
             
-            .phone-list-item input[type="button"]:hover {
+            .phone-list-item input[type="submit"]:hover {
                 color: #ffffff;
                 background-color: rgb(74, 163, 240);
             }

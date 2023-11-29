@@ -90,35 +90,43 @@
       
       <div class="row btnaddtocart">
                 <form action="index.php?act=addtocart" method="post">
-                <input type="hidden" name="id" value="' .$mahh. '">
+                <input type="hidden" name="id" value="' . $mahh . '">
                 <input type="hidden" name="name" value="' . $tenhh . '">
-                <input type="hidden" name="img" value="' .$hinhanh. '">
-                <input type="hidden" name="price" value="' . $dongia. '"><br>
+                <input type="hidden" name="img" value="' . $hinhanh . '">
+                <input type="hidden" name="price" value="' . $dongia . '"><br>
 
                 <input type="submit" style="margin-top: -70px; margin-left: 80px;" name="addtocart" value="Add to cart">
                 </form>
 
-                </div>
+      </div>
     </div>';
     }
     ?>
   </div>
-  <div class="phone-list-container" >
+  <div class="phone-list-container">
     <h1 class="phone-list-title">Top 10 yêu thích</h1>
     <div class="phone-list-wrapper">
-      <div class="phone-list" >
+      <div class="phone-list">
         <?php
         foreach ($ds_top10 as $hh) {
           extract($hh);
           $link_hh = "index.php?act=hanghoact&ma_hh=" . $mahh;
           $hinhanh = $img_path . $hinhanh;
           echo '<div class="phone-list-item"  data-aos="fade-up" data-aos-duration="2000">
-                <a href=""><img src="'.$hinhanh.'" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-                <div class="name" style="text-align: center;"><a href="#">'.$tenhh.'</a></div>
-                <p>'.$dongia.' VNĐ</p>
-                <a href="" ><input type="button" value="Add to cart"></a>
+                <a href=""><img src="' . $hinhanh . '" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
+                <div class="name" style="text-align: center;"><a href="#">' . $tenhh . '</a></div>
+                <p>' . $dongia . ' VNĐ</p>
+                <div class="row btnaddtocart">
+                <form action="index.php?act=addtocart" method="post">
+                <input type="hidden" name="id" value="' . $mahh . '">
+                <input type="hidden" name="name" value="' . $tenhh . '">
+                <input type="hidden" name="img" value="' . $hinhanh . '">
+                <input type="hidden" name="price" value="' . $dongia . '"><br>
+
+                <input type="submit" style="margin-top: -50px; margin-left: 70px;" name="addtocart" value="Add to cart">
+                </form>
+              </div>
               </div>';
-              
         }
         ?>
       </div>

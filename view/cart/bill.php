@@ -64,15 +64,23 @@
     </div>
 </div>
 <div class="container mt-5 border rounded p-4 ">
-<table id="cart" class="table table-hover table-condensed">
-            <?php
+    <table id="cart" class="table table-hover table-condensed">
+        <?php
         viewcart(1);
         ?>
-       
-        
-        </table>
+    </table>
+
+</div>
+<div class="bill">
+    <a href="index.php?act=billconfirm"><input type="submit" class="btn btn-success" name="dongydathang" value="Đồng ý đặt hàng"></a>
 </div>
 <style>
+    .bill {
+        margin-left: 1150px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
     .formtt {
         display: flex;
         flex-direction: column;

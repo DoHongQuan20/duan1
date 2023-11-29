@@ -38,33 +38,34 @@
 
   </div>
 
-  <div class="col-md-9 hnh2" style="margin-left: -80px;margin-top: 10px;">
+  <div class="col-md-9 hnh2" style="margin-left: -150px;margin-top: 10px;">
     <div class="top-content">
-      <div class="row sp" style="display: flex;flex-direction: row;  ">
-        <div class="boxsp" data-aos="fade-up" data-aos-duration="2000" style="width: 230px; margin-bottom: 20px;">
-          <a href="index.php?act=ctsanpham"><img src="./img/ip14promax.jpg" alt="Điện thoại 3"></a>
-          <div class="name"><a href="#">Apple Watch seri3</a></div>
-          <p>$5900</p><br>
-          <a href=""><input type="button" value="Add to cart" style="margin-left:68px;"></a>
-        </div>
-        <div class="boxsp" data-aos="fade-up" data-aos-duration="2000" style="width: 230px;">
-          <a href=""><img src="./img/ip14promax.jpg" alt="Điện thoại 3"></a>
-          <div class="name"><a href="#">Apple Watch seri3</a></div>
-          <p>$5900</p><br>
-          <a href=""><input type="button" value="Add to cart" style="margin-left:68px;"></a>
-        </div>
-        <div class="boxsp" data-aos="fade-up" data-aos-duration="2000" style="width: 230px;">
-          <a href=""><img src="./img/ip14promax.jpg" alt="Điện thoại 3"></a>
-          <div class="name"><a href="#">Apple Watch seri3</a></div>
-          <p>$5900</p><br>
-          <a href=""><input type="button" value="Add to cart" style="margin-left:68px;"></a>
-        </div>
-        <div class="boxsp" data-aos="fade-up" data-aos-duration="2000" style="width: 230px;">
-          <a href=""><img src="./img/ip14promax.jpg" alt="Điện thoại 3"></a>
-          <div class="name"><a href="#">Apple Watch seri3</a></div>
-          <p>$5900</p><br>
-          <a href=""><input type="button" value="Add to cart" style="margin-left:68px;"></a>
-        </div>
+      <div class="row sp" style="display: flex;flex-direction: row;width: 1100px;  ">
+      <?php
+    $i = 0;
+    foreach ($hanghoa_new as $hh) {
+      extract($hh);
+      $hinhanh = $img_path . $hinhanh;
+      $link_hh = "index.php?act=ctsanpham&mahh=" . $mahh;
+      echo '<div class="boxsp" data-aos="fade-up" data-aos-duration="2000" style="margin-bottom: 20px; width: 230px;">
+      <a href="' . $link_hh . '"><img src="' . $hinhanh . '" alt="Điện thoại 3"></a>
+      <div class="name"><a href="#">' . $tenhh . '</a></div>
+      <p>' . $dongia . ' VNĐ</p><br>
+      
+      <div class="row btnaddtocart">
+                <form action="index.php?act=addtocart" method="post">
+                <input type="hidden" name="id" value="' . $mahh . '">
+                <input type="hidden" name="name" value="' . $tenhh . '">
+                <input type="hidden" name="img" value="' . $hinhanh . '">
+                <input type="hidden" name="price" value="' . $dongia . '"><br>
+
+                <input type="submit" style="margin-top: -70px; margin-left: 80px;" name="addtocart" value="Add to cart">
+                </form>
+
+      </div>
+    </div>';
+    }
+    ?>
 
       </div>
     </div>

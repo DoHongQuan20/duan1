@@ -5,6 +5,7 @@ include "admin/model/hanghoa.php";
 include "admin/model/danhmuc.php";
 include "admin/model/pdo.php";
 include "admin/model/cart.php";
+include "admin/model/bill.php";
 include "view/header.php";
 include "global.php";
 
@@ -129,7 +130,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'bill':
             include "view/cart/bill.php";
             break;
-        case 'billcomfirm':
+        case 'billconfirm':
             if (isset($_POST['dongydathang']) && ($_POST['dongydathang'])) {
                 if (isset($_SESSION['user'])) $iduser = $_SESSION['user']['id'];
                 else $id = 0;
@@ -149,7 +150,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             }
             $bill = loadone_bill($idbill);
             $billct = loadall_cart($idbill);
-            include "view/cart/billcomfirm.php";
+            include "view/cart/billconfirm.php";
             break;
         case 'mybill':
             $listbill = loadall_bill($_SESSION['user']['id']);

@@ -80,13 +80,14 @@ function bill_chi_tiet($listbill)
     $tong = 0;
     $i = 0;
     echo '<tr>
-<th>hình</th>
-<th>sản phẩm</th>
-<th>đơn giá</th>
-<th>số lượng</th>
-<th>thành tiền </th>
-
-
+    <th style="width:50% ">
+        <h5>Tên sản phẩm</h5>
+    </th>
+    <th style="width:10%">
+        <h5>Giá</h5>
+    </th>
+    <th style="width:14%"><h5>Số lượng</h5></th>
+    <th style="width:18%" class="text-center"><h5>Thành tiền</h5></th>
 </tr>';
 
     // var_dump($_SESSION['mycart']);
@@ -95,12 +96,32 @@ function bill_chi_tiet($listbill)
         $tong += $cart['thanhtien'];
         echo '
     <tr>
-        <td><img src="' . $hinh . '" alt="" height="80px"></td>
-        <td>' . $cart['name'] . '</td>
-        <td>' . $cart['price'] . '</td>
-        <td>' . $cart['soluong'] . '</td>
-        <td>' . $cart['thanhtien'] . '</td>
-    </tr>';
+    <tbody>
+    <tr>
+        <td data-th="Product">
+            <div class="row" >
+                <div class="col-sm-3 hidden-xs" ">
+                    <img src="' . $hinh . '" alt="Sản phẩm 1" class="img-responsive" width="90" />
+                </div>
+                <div class="col-sm-9" >
+                    <h5 class="nomargin">' . $cart[1] . '</h5>
+                    <p>Mô tả của sản phẩm </p>
+                </div>
+            </div>
+        </td>
+        <td data-th="Price">
+            <p style="margin-top: 30px;">' . $cart[3] . '</p>
+        </td>
+        <td data-th="Quantity">
+        <p style="margin-top: 30px;">' . $cart[4] . '</p>
+        </td>
+        <td data-th="Subtotal" class="text-center">
+            <p style="margin-top: 30px;">' . $tong . '</p>
+        </td>
+        
+    </tr>
+</tbody>
+';
         $i += 1;
     }
     echo '<tr>
@@ -120,26 +141,29 @@ function tongdonhang()
     }
     return $tong;
 }
-function insert_bill($iduser, $name, $email, $address, $tel, $pttt, $ngaydathang, $tongdonhang)
-{
-    $sql = "INSERT INTO bill(iduser,bill_name,bill_email,bill_address,bill_tel,bill_pttt,ngaydathang,total) VALUES('$iduser','$name','$email','$address','$tel','$pttt','$ngaydathang','$tongdonhang')";
-    return pdo_execute_return_lastInsertId($sql);
-}
+
 function insert_cart($iduser, $idpro, $img, $name, $price, $soluong, $thanhtien, $idbill)
 {
     $sql = "INSERT INTO cart(iduser,idpro,img,name,price,soluong,thanhtien,idbill)
          VALUES('$iduser','$idpro','$img','$name','$price','$soluong','$thanhtien','$idbill')";
     pdo_execute($sql);
+} 
+
+function insert_bill($iduser, $name, $email, $address, $tel, $pttt, $ngaydathang, $tongdonhang)
+{
+    $sql = "INSERT INTO bill(iduser,bill_name,bill_email,bill_address,bill_tel,bill_pttt,ngaydathang,total) VALUES('$iduser','$name','$email','$address','$tel','$pttt','$ngaydathang','$tongdonhang')";
+    return pdo_execute_return_lastInsertId($sql);
 }
+
 function loadone_bill($id)
 {
-    $sql = "select * from bill where id=" . $id;
+    $sql = "select * from bill where id='$id'";
     $bill = pdo_query_one($sql);
     return $bill;
 }
 function loadall_cart($idbill)
 {
-    $sql = "select * from cart where idbill=" . $idbill;
+    $sql = "select * from cart where idbill='$idbill'" ;
     $bill = pdo_query($sql);
     return $bill;
 }
