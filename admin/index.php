@@ -5,6 +5,7 @@ include "model/danhmuc.php";
 include "model/hanghoa.php";
 include "model/taikhoan.php";
 include "model/binhluan.php";
+include "model/cart.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
@@ -164,6 +165,16 @@ if (isset($_GET['act'])) {
         case 'bieudo':
             $listthongke = loadall_thongke();
             include "thongke/bieudo.php";
+            break;
+        case 'dsdh':
+            if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
+                $kyw = $_POST['kyw'];
+            } else {
+                $kyw = "";
+            }
+            $listbill = loadall_bill($kyw, 0);
+
+            include "donhang/list.php";
             break;
     }
 } else {

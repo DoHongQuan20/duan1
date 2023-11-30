@@ -110,10 +110,10 @@
         <?php
         foreach ($ds_top10 as $hh) {
           extract($hh);
-          $link_hh = "index.php?act=hanghoact&ma_hh=" . $mahh;
+          $link_hh = "index.php?act=ctsanpham&mahh=" . $mahh;
           $hinhanh = $img_path . $hinhanh;
           echo '<div class="phone-list-item"  data-aos="fade-up" data-aos-duration="2000">
-                <a href=""><img src="' . $hinhanh . '" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
+                <a href="'.$link_hh.'"><img src="' . $hinhanh . '" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
                 <div class="name" style="text-align: center;"><a href="#">' . $tenhh . '</a></div>
                 <p>' . $dongia . ' VNĐ</p>
                 <div class="row btnaddtocart">

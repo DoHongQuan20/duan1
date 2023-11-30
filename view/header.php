@@ -47,6 +47,7 @@
               <?php if (isset($_SESSION['user']['role']) == 1) { ?>
                 <li><a class="dropdown-item pl-3 py-2" href="../admin/index.php"> Trang quản trị </a></li>
               <?php } ?>
+              <li><a class="dropdown-item pl-3 py-2" href="index.php?act=mybill">Đơn hàng của tôi</a></li>
               <li><a class="dropdown-item pl-3 py-2" href="#">Cập nhật tài khoản</a></li>
               <li><a class="dropdown-item pl-3 py-2" href="#">Đổi mật khẩu</a></li>
               <li><a class="dropdown-item pl-3 py-2" href="../index.php?act=thoat">Đăng xuất</a></li>

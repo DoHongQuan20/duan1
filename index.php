@@ -153,7 +153,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "view/cart/billconfirm.php";
             break;
         case 'mybill':
-            $listbill = loadall_bill($_SESSION['user']['id']);
+            $listbill = loadall_bill($kyw = "",$_SESSION['user']['id']);
             include "view/cart/mybill.php";
             break;
         default:

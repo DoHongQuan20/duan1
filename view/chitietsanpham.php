@@ -182,10 +182,19 @@
                         $linkhh = "index.php?act=ctsanpham&mahh=" . $mahh;
                         $hinhanh = $img_path . $hinhanh;
                         echo '<div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
-                <a href=""><img src="' . $hinhanh . '" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
+                <a href="'.$linkhh.'"><img src="' . $hinhanh . '" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
                 <div class="name" style="text-align: center;"><a href="#">' . $tenhh . '</a></div>
-                <p>' . $dongia . '</p>
-                <a href=""><input type="button" value="Add to cart"></a>
+                <p>' . $dongia . ' VNĐ</p>
+                <div class="row btnaddtocart">
+                <form action="index.php?act=addtocart" method="post">
+                <input type="hidden" name="id" value="' . $mahh . '">
+                <input type="hidden" name="name" value="' . $tenhh . '">
+                <input type="hidden" name="img" value="' . $hinhanh . '">
+                <input type="hidden" name="price" value="' . $dongia . '"><br>
+
+                <input type="submit" style="margin-top: -50px; margin-left: 72px;" name="addtocart" value="Add to cart">
+                </form>
+              </div>
               </div>';
                     }
                     ?>
