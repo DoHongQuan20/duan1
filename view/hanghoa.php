@@ -86,7 +86,17 @@
       <a href="' . $link_hh . '"><img src="' . $hinhanh . '" alt="Điện thoại 3"></a>
       <div class="name"><a href="#">' . $tenhh . '</a></div>
       <p>' . $dongia . '</p><br>
-      <a href=""><input type="button" value="Add to cart"></a>
+      <div class="row btnaddtocart">
+                <form action="index.php?act=addtocart" method="post">
+                <input type="hidden" name="id" value="' . $mahh . '">
+                <input type="hidden" name="name" value="' . $tenhh . '">
+                <input type="hidden" name="img" value="' . $hinhanh . '">
+                <input type="hidden" name="price" value="' . $dongia . '"><br>
+
+                <input type="submit" style="margin-top: -70px; margin-left: 80px;" name="addtocart" value="Add to cart">
+                </form>
+
+      </div>
     </div>';
     }
     ?>

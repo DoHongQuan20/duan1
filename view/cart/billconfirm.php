@@ -127,10 +127,4 @@
         padding: 6px;
         border-bottom: 1px solid #ddd;
     }
-
-    .cart {
-        /* Styles for the cart section */
-    }
-
-    /* You can further customize styles based on your design requirements */
 </style>

@@ -32,6 +32,21 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $tendm = load_ten_danhmuc($iddm);
             include "view/hanghoa.php";
             break;
+        case 'hanghoa2':
+            if (isset($_POST['key']) && ($_POST['key']) != "") {
+                $key = $_POST['key'];
+            } else {
+                $key = "";
+            }
+            if (isset($_GET['iddm']) && ($_GET['iddm']) > 0) {
+                $iddm = $_GET['iddm'];
+            } else {
+                $iddm = 0;
+            }
+            $ds_hh = loadall_hanghoa($key, $iddm);
+            $tendm = load_ten_danhmuc($iddm);
+            include "view/hanghoa2.php";
+            break;
         case 'gioithieu':
             include "view/gioithieu.php";
             break;
@@ -68,6 +83,19 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $thongbao = "Tài khoản không tồn tại";
             }
             include "view/taikhoan/dangnhap.php";
+            break;
+        case 'quenmk':
+            if (isset($_POST['guiemail'])) {
+                $user = $_POST['user'];
+                $email = $_POST['email'];
+                $checkemail = checkemail($user, $email);
+                if (is_array($checkemail)) {
+                    $thongbao = "Mật khẩu của bạn là: " . $checkemail['pass'];
+                } else {
+                    $thongbao = "Email hoặc tên đăng nhập không đúng";
+                }
+            }
+            include "view/taikhoan/quenmk.php";
             break;
         case 'thoat':
             session_unset();
@@ -153,7 +181,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "view/cart/billconfirm.php";
             break;
         case 'mybill':
-            $listbill = loadall_bill($kyw = "",$_SESSION['user']['id']);
+            $listbill = loadall_bill($kyw = "", $_SESSION['user']['id']);
             include "view/cart/mybill.php";
             break;
         default:

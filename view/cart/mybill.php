@@ -17,7 +17,7 @@
                 $ttdh = get_ttdh($bill['bill_status']);
                 $countsp = loadall_cart_count($bill['id']);
                 echo '<tr>
-            <td>DAM-' . $bill['id'] . '</td>
+            <td>DH-' . $bill['id'] . '</td>
             <td>' . $bill['ngaydathang'] . '</td>
             <td>' . $countsp . '</td>
             <td>' . $bill['total'] . '</td>

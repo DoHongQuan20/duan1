@@ -175,9 +175,15 @@ function loadall_cart_count($idbill)
 }
 function loadall_bill($kyw = "", $iduser = 0)
 {
-    $sql = "select * from donhang where 1";
-    if ($iduser > 0) $sql .= " AND iduser=" . $iduser;
-    if ($kyw != "") $sql .= " AND id like '%" . $iduser . "%'";
+    $sql = "select * from donhang where 1"; 
+    if ($iduser > 0) {
+        $sql .= " AND iduser=" . $iduser;
+    }
+    // Thêm điều kiện vào câu truy vấn nếu có $kyw không rỗng
+    if ($kyw != "") {
+        $sql .= " AND id like '%" . $iduser . "%'";
+    }
+    // Sắp xếp kết quả theo cột 'id' theo thứ tự giảm dần
     $sql .= " order by id desc";
     $listbill = pdo_query($sql);
     return $listbill;

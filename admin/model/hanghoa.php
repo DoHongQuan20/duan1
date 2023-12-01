@@ -25,15 +25,18 @@ function loadall_hanghoa_home()
     return $listhh;
 }
 
-function loadall_hanghoa($key="",$iddm = 0)
+function loadall_hanghoa($key = "", $iddm = 0)
 {
     $sql = "select * from hanghoa where 1";
+    // Thêm điều kiện vào câu truy vấn nếu có $key không rỗng
     if ($key != '') {
-        $sql .= " and tenhh like '%".$key."%'";
+        $sql .= " and tenhh like '%" . $key . "%'";
     }
+    // Thêm điều kiện vào câu truy vấn nếu có $iddm lớn hơn 0
     if ($iddm > 0) {
-        $sql .= " and iddm ='".$iddm."'";
+        $sql .= " and iddm ='" . $iddm . "'";
     }
+    // Sắp xếp kết quả theo cột 'mahh' theo thứ tự giảm dần
     $sql .= " order by mahh desc";
     $listhh = pdo_query($sql);
     return $listhh;
