@@ -7,24 +7,35 @@
     <link rel="stylesheet" href="css/style2.css">
     <title>Đăng nhập</title>
     <style>
+        .forgot-password {
+            order: -1;
+            /* Đặt thứ tự xuất hiện */
+        }
 
+        .register {
+            order: 2;
+            /* Đặt thứ tự xuất hiện */
+        }
     </style>
 </head>
 
 <body>
+    <div class="container-form">
+        <form action="index.php?act=dangnhap" method="post">
+            <h2>Đăng Nhập</h2>
+            <label for="username">Tên đăng nhập</label>
+            <input type="text" class="form-control hoten" style="width:100%;" name="user" required>
 
-    <form action="index.php?act=dangnhap" method="post">
-        <h2>Đăng Nhập</h2>
-        <label for="username">Tên đăng nhập</label>
-        <input type="text" class="form-control hoten" style="width:460px;" name="user" required>
-
-        <label for="password">Mật khẩu:</label>
-        <input type="password" class="form-control" name="pass" required><br>
-        <a style="margin-bottom: 20px;" href="index.php?act=quenmk">Quên mật khẩu</a><br>
-        <input type="submit" name="dangnhap" value="Đăng nhập"><br>
-        <a href="#"></a><input style="background-color: #ff3333; margin-left: -10px; margin-top: 10px;" type="submit" value="Thoát" name=""></a>
-    </form>
-
+            <label for="password">Mật khẩu:</label>
+            <input type="password" class="form-control" name="pass" required><br>
+            <div class="ngang" style="display: flex; flex-direction: row; justify-content: space-between;">
+                <a class="forgot-password " href="index.php?act=quenmk">Quên mật khẩu?</a><br>
+                <a class="register" href="index.php?act=dangky">Đăng ký</a><br>
+            </div>
+            <input type="submit" name="dangnhap" value="Đăng nhập"><br>
+            <input style="background-color: #ff3333; margin-top: 10px;" type="submit" value="Thoát" name="thoat">
+        </form>
+    </div>
 </body>
 
 </html>

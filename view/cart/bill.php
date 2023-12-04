@@ -30,7 +30,13 @@
             <td>Điện thoại</td>
             <td><input class="form-control" type="text" name="tel" value="<?= $tel; ?>"></td><br>
         </div>
-
+        <b>
+            <?php
+            if ($name = "" || $address = "" || $email = "" || $tel = "") {
+                $thongbao = "bạn phải nhập đầy đủ thông tin";
+            }
+            ?>
+        </b>
 
     </div>
 

@@ -126,9 +126,9 @@
             <div class="container2">
                 <?php
                 extract($one_hh);
-                $hinh = $img_path . $hinhanh;
+                $hinhanh = $img_path . $hinhanh;
                 echo '<div class="product-image">
-                        <img src="' . $hinh . '" alt="Product Image" />
+                        <img src="' . $hinhanh . '" alt="Product Image" />
                     </div>';
                 echo '<div class="product-details" >
                 <h1><b>'.$tenhh.'</b></h1>
@@ -146,7 +146,16 @@
                 <p class="description" style="margin-left: 5px">
                    Mô tả : '.$mota.'
                 </p>
-                <a href="#" style="margin-left: 5px" class="btn">MUA NGAY</a>
+                <div class="row btnaddtocart">
+                <form action="index.php?act=addtocart" method="post">
+                <input type="hidden" name="id" value="' . $mahh . '">
+                <input type="hidden" name="name" value="' . $tenhh . '">
+                <input type="hidden" name="img" value="' . $hinhanh . '">
+                <input type="hidden" name="price" value="' . $dongia . '"><br>
+
+                <input type="submit" class="btn btn-danger" style="margin-top: -50px; margin-left: 15px;" name="addtocart" value="Mua Ngay">
+                </form>
+              </div>
             </div>
 ';
 

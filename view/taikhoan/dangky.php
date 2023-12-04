@@ -12,36 +12,36 @@
 </head>
 
 <body>
+    <div class="container-form">
+        <form action="index.php?act=dangky" method="post" style="">
+            <h2>Đăng ký</h2>
+            <label for="username">Tên đăng nhập</label>
+            <input type="text" class="form-control hoten" style="width:100%;" name="user" required>
 
-    <form action="index.php?act=dangky" method="post">
-        <h2>Đăng ký</h2>
-        <label for="username">Tên đăng nhập</label>
-        <input type="text" class="form-control hoten" style="width:460px;" name="user" required>
+            <label for="password">Mật khẩu</label>
+            <input type="password" class="form-control" name="pass" required>
 
-        <label for="password">Mật khẩu</label>
-        <input type="password" class="form-control" name="pass" required>
+            <label for="name">Họ và tên</label>
+            <input type="text" class="form-control hoten" style="width:100%;" name="name" required>
 
-        <label for="name">Họ và tên</label>
-        <input type="text" class="form-control hoten" style="width:460px;" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" required>
 
-        <label for="email">Email</label>
-        <input type="email" class="form-control" name="email" required>
+            <label for="email">Số điện thoại</label>
+            <input type="text" class="form-control" style="width:100%;" name="tel" required>
 
-        <label for="email">Số điện thoại</label>
-        <input type="text" class="form-control" style="width:460px;" name="tel" required>
+            <label for="email">Địa chỉ</label>
+            <input type="text" class="form-control" style="width:100%;" name="address" required><br>
 
-        <label for="email">Địa chỉ</label>
-        <input type="text" class="form-control" style="width:460px;" name="address" required><br>
+            <input type="submit" name="dangky" value="Đăng ký"><br>
+            <input style="background-color: #ff3333; margin-top: 10px;" type="submit" value="Thoát" name="thoat">
 
-        <input type="submit" name="dangky" value="Đăng ký"><br>
-        <a href="index.php"></a><input style="background-color: #ff3333; margin-left: -10px; margin-top: 10px;" type="submit" value="Thoát" name=""></a>
-
-        <b><?php if (isset($thongbao) && ($thongbao != "")) {
-                echo $thongbao;
-            }
-            ?></b>
-    </form>
-
+            <b><?php if (isset($thongbao) && ($thongbao != "")) {
+                    echo $thongbao;
+                }
+                ?></b>
+        </form>
+    </div>
 </body>
 
 </html>

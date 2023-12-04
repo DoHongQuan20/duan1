@@ -67,6 +67,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 insert_taikhoan($name, $user, $email, $pass, $tel, $address);
                 $thongbao = "Đã đăng kí thành công";
             }
+            if (isset($_POST['thoat']) && ($_POST['thoat'])) {
+                header('location: index.php');
+                break;
+            }
             include "view/taikhoan/dangky.php";
             break;
         case 'dangnhap':
@@ -82,6 +86,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             } else {
                 $thongbao = "Tài khoản không tồn tại";
             }
+            if (isset($_POST['thoat']) && ($_POST['thoat'])) {
+                header('location: index.php');
+                break;
+            }
             include "view/taikhoan/dangnhap.php";
             break;
         case 'quenmk':
@@ -94,6 +102,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 } else {
                     $thongbao = "Email hoặc tên đăng nhập không đúng";
                 }
+            }
+            if (isset($_POST['thoat']) && ($_POST['thoat'])) {
+                header('location: index.php');
+                break;
             }
             include "view/taikhoan/quenmk.php";
             break;
@@ -156,6 +168,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "view/cart/viewcart.php";
             break;
         case 'bill':
+            if (isset($_SESSION['user'])) {
+            } else {
+                header('location: index.php?act=dangnhap');
+            }
             include "view/cart/bill.php";
             break;
         case 'billconfirm':
