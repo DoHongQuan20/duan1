@@ -11,7 +11,7 @@
       }
       ?>
     </select>
-    <input type="submit" class="nutbtn" name="list" value="GO">
+    <input type="submit" class="nutbtn" name="list" value="Tìm">
   </form>
   <table class="table table-hover">
     <tr>

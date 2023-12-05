@@ -48,8 +48,8 @@
                 <li><a class="dropdown-item pl-3 py-2" href="../admin/index.php"> Trang quản trị </a></li>
               <?php } ?>
               <li><a class="dropdown-item pl-3 py-2" href="index.php?act=mybill">Đơn hàng của tôi</a></li>
-              <li><a class="dropdown-item pl-3 py-2" href="#">Cập nhật tài khoản</a></li>
-              <li><a class="dropdown-item pl-3 py-2" href="#">Đổi mật khẩu</a></li>
+              <li><a class="dropdown-item pl-3 py-2" href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a></li>
+              <li><a class="dropdown-item pl-3 py-2" href="index.php?act=doimk">Đổi mật khẩu</a></li>
               <li><a class="dropdown-item pl-3 py-2" href="../index.php?act=thoat">Đăng xuất</a></li>
             <?php } ?>
 
@@ -57,12 +57,15 @@
           </ul>
         </div>
         <div class="text">
-          <span class="text-dark">Xin chào!</span>
+          
           <?php
           if (isset($_SESSION['user'])) { ?>
+          <span class="text-dark">Xin chào!</span>
             <div class="text-dark text-info"><?= $_SESSION['user']['name'] ?></div>
           <?php } else { ?>
             <a href="index.php?act=dangnhap" class="d-block text-info">Đăng nhập</a>
+            <span>/</span>
+            <a href="index.php?act=danngky" class="d-block text-info">Đăng Ký</a>
           <?php } ?>
 
         </div>

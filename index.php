@@ -64,13 +64,19 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $pass = $_POST['pass'];
                 $tel = $_POST['tel'];
                 $address = $_POST['address'];
-                insert_taikhoan($name, $user, $email, $pass, $tel, $address);
-                $thongbao = "Đã đăng kí thành công";
+                $existingEmail = checkmail($email);
+                $existingTel = checktel($tel);
+
+                if ($existingEmail) {
+                    $thongbao1 = "Email đã tồn tại";
+                } elseif ($existingTel) {
+                    $thongbao2 = "Số điện thoại đã tồn tại";
+                } else {
+                    insert_taikhoan($name, $user, $email, $pass, $tel, $address);
+                    $thongbao = "Đã đăng kí thành công";
+                }
             }
-            if (isset($_POST['thoat']) && ($_POST['thoat'])) {
-                header('location: index.php');
-                break;
-            }
+
             include "view/taikhoan/dangky.php";
             break;
         case 'dangnhap':
@@ -78,17 +84,12 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $user = $_POST['user'];
                 $pass = $_POST['pass'];
                 $checkuser = checkuser($user, $pass);
-                if (is_array($checkuser))
+                if (is_array($checkuser)) {
                     $_SESSION['user'] = $checkuser;
-                $thongbao = "Đăng Nhập thành công";
-                header('location:index.php');
-                $thongbao = "Đăng Nhập thành công";
-            } else {
-                $thongbao = "Tài khoản không tồn tại";
-            }
-            if (isset($_POST['thoat']) && ($_POST['thoat'])) {
-                header('location: index.php');
-                break;
+                    header('location:index.php');
+                } else {
+                    $thongbao = "Tài khoản hoặc mật khẩu không đúng, vui lòng kiểm tra lại hoặc đăng ký!";
+                }
             }
             include "view/taikhoan/dangnhap.php";
             break;
@@ -108,6 +109,44 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 break;
             }
             include "view/taikhoan/quenmk.php";
+            break;
+        case 'edit_taikhoan':
+            if (isset($_POST['capnhat'])) {
+                $user = $_POST['user'];
+                $pass = $_POST['pass'];
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $adress = $_POST['address'];
+                $tel = $_POST['tel'];
+                $id = $_POST['id'];
+                update_taikhoan($id, $user, $pass, $name, $email, $adress, $tel);
+                $_SESSION['user'] = checkuser($user, $pass);
+
+                $thongbao = "Cập nhật tài khoản thành công";
+            }
+            include "view/taikhoan/edit_taikhoan.php";
+            break;
+        case 'doimk':
+            if (isset($_POST['doimk'])) {
+                $id = $_POST['id'];
+                $user = $_POST['user'];
+                $pass = $_POST['pass'];
+                $passnew = $_POST['passnew'];
+                $repassnew = $_POST['repassnew'];
+                $checkuser = checkuser($user, $pass);
+                if (is_array($checkuser)) {
+                    $_SESSION['user'] = $checkuser;
+                    if ($passnew == $repassnew) {
+                        update_pass($id, $passnew);
+                        $thongbao = "Đổi mật khẩu thành công";
+                    } else {
+                        $thongbao = "Mật khẩu không trùng khớp mời nhập lại";
+                    }
+                } else {
+                    $thongbao = "Mật khẩu không đúng!!";
+                }
+            }
+            include "view/taikhoan/doimk.php";
             break;
         case 'thoat':
             session_unset();

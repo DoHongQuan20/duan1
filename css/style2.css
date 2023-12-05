@@ -28,6 +28,10 @@ input[type="submit"] {
     height: 40px;
 }
 
+b {
+    color: #cc0000;
+}
+
 input[type="submit"]:hover {
     background-color: #339e38;
 }
@@ -40,6 +44,8 @@ input[type="button"] {
     color: #fff;
     cursor: pointer;
     border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 40px;
 }
 
 input[type="reset"] {

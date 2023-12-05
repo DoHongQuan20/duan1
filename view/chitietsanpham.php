@@ -119,8 +119,7 @@
         }
     </style>
 
-    </head>
-
+</head>
     <body>
         <div class="container1">
             <div class="container2">
@@ -158,10 +157,7 @@
               </div>
             </div>
 ';
-
                 ?>
-
-
             </div>
         </div>
 

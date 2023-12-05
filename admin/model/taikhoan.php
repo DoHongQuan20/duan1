@@ -10,9 +10,15 @@ function checkuser($user,$pass)
     $check = pdo_query_one($sql);
     return $check;
 }
-function checkemail1($email)
+function checkmail($email)
 {
     $sql = "SELECT * FROM taikhoan where email='".$email."'";
+    $check = pdo_query_one($sql);
+    return $check;
+}
+function checktel($tel)
+{
+    $sql = "SELECT * FROM taikhoan where tel='".$tel."'";
     $check = pdo_query_one($sql);
     return $check;
 }
@@ -21,9 +27,9 @@ function update_pass($id,$pass)
     $sql = "UPDATE taikhoan SET pass= '$pass' where id ='$id'";
     pdo_execute($sql);
 }
-function update_taikhoan($id, $user, $pass, $email, $address, $tel)
+function update_taikhoan($id, $user, $pass,$name, $email, $address, $tel)
 {
-    $sql = "UPDATE taikhoan SET user ='$user',pass= '$pass',email = '$email',address='$address',tel='$tel' where id ='$id'";
+    $sql = "UPDATE taikhoan SET user ='$user',pass= '$pass',name='$name',email = '$email',address='$address',tel='$tel' where id ='$id'";
     pdo_execute($sql);
 }
 
