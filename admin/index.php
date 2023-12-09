@@ -77,13 +77,22 @@ if (isset($_GET['act'])) {
         case 'listhh':
             if (isset($_POST['list'])) {
                 $key = $_POST['key'];
-                $iddm = $_POST['iddm'];
+                $iddm = (int)$_POST['iddm'];
             } else {
                 $key = '';
                 $iddm = 0;
             }
+            if(!isset($_GET['page'])){
+                $page = 1;
+            }else{
+                $page = (int)$_GET['page'];
+            }
+            $slsp = 8;
+
             $listdm = loadall_danhmuc();
-            $listhh = loadall_hanghoa($key, $iddm);
+            $listhh = loadall_hanghoaadmin($key,$iddm,$page,$slsp);
+            $tongsosp = load_hanghoaall();
+            $hienthisotrang = hien_thi_trang($tongsosp,$slsp);
             include "hanghoa/list.php";
             break;
         case 'xoahh':

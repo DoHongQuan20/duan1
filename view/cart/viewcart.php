@@ -13,7 +13,7 @@
                     <td class="hidden-xs"> </td>
                     <td></td>
                     <td></td>
-                    <td colspan="2"><a href="index.php?act=bill" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
+                    <td colspan="4"><a href="index.php?act=bill" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
                     </td>
                 </tr>
             </tfoot>

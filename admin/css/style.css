@@ -87,7 +87,7 @@ nav ul li {
 
 .nd {
     margin-left: -100px;
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 table {
@@ -194,4 +194,8 @@ h2 {
     .sidebar a {
         font-size: 16px;
     }
+}
+
+.pagination {
+    margin: auto;
 }

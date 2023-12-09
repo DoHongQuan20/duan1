@@ -11,6 +11,28 @@ include "global.php";
 
 if (!isset($_SESSION['mycart'])) $_SESSION['mycart'] = [];
 
+if (isset($_POST['key']) && ($_POST['key']) != "") {
+    $key = $_POST['key'];
+} else {
+    $key = "";
+}
+if (isset($_GET['iddm']) && ($_GET['iddm']) > 0) {
+    $iddm = $_GET['iddm'];
+} else {
+    $iddm = 0;
+}
+if (!isset($_GET['page'])) {
+    $page = 1;
+} else {
+    $page = (int)$_GET['page'];
+}
+$slsp = 12;
+$slsp_home = 10;
+
+$hang_hoa = loadall_hanghoaadmin($key, $iddm, $page, $slsp);
+$tongsosp = load_hanghoaall();
+$hienthisotrang = hien_thi_trang_san_pham($tongsosp, $slsp);
+
 $ds_dm = loadall_danhmuc();
 $hanghoa_new = loadall_hanghoa_home();
 $ds_top10 = loadall_hanghoa_top10();
@@ -175,6 +197,12 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             } else {
                 $iddm = 0;
             }
+            if (!isset($_GET['page'])) {
+                $page = 1;
+            } else {
+                $page = (int)$_GET['page'];
+            }
+            $slsp = 12;
             $ds_hh = loadall_hanghoa($key, $iddm);
             $tendm = load_ten_danhmuc($iddm);
             include "view/sanpham.php";
@@ -186,7 +214,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $name = $_POST['name'];
                 $img = $_POST['img'];
                 $price = $_POST['price'];
-                $soluong = 1;
+                $soluong = $_POST['soluong'];
                 $ttien = $soluong * $price;
                 $spadd = [$id, $name, $img, $price, $soluong, $ttien];
                 array_push($_SESSION['mycart'], $spadd);
@@ -239,6 +267,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $listbill = loadall_bill($kyw = "", $_SESSION['user']['id']);
             include "view/cart/mybill.php";
             break;
+
         default:
             include "view/home.php";
             break;

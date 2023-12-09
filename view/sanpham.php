@@ -50,14 +50,14 @@
       <div class="row sp" style="display: flex;flex-direction: row;width: 1100px;  ">
         <?php
         $i = 0;
-        foreach ($hanghoa_new as $hh) {
+        foreach ($hang_hoa as $hh) {
           extract($hh);
           $hinhanh = $img_path . $hinhanh;
           $link_hh = "index.php?act=ctsanpham&mahh=" . $mahh;
           echo '<div class="boxsp" data-aos="fade-up" data-aos-duration="2000" style="margin-bottom: 20px; width: 230px;">
       <a href="' . $link_hh . '"><img src="' . $hinhanh . '" alt="Điện thoại 3"></a>
       <div class="name"><a href="#">' . $tenhh . '</a></div>
-      <p>' . $dongia . ' VNĐ</p><br>
+      <p>' . number_format($dongia, 0, ',') . ' VNĐ</p><br>
       
       <div class="row btnaddtocart">
                 <form action="index.php?act=addtocart" method="post">
@@ -73,8 +73,14 @@
     </div>';
         }
         ?>
+        
 
       </div>
     </div>
+    <ul class="pagination" style="justify-content: center; margin-bottom: 30px; margin-top: 30px;">
+          <?php
+          echo $hienthisotrang;
+          ?>
+        </ul>
   </div>
 </div>

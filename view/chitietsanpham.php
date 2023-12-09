@@ -121,7 +121,7 @@
 
 </head>
     <body>
-        <div class="container1">
+        <div class="container1" >
             <div class="container2">
                 <?php
                 extract($one_hh);
@@ -131,7 +131,7 @@
                     </div>';
                 echo '<div class="product-details" >
                 <h1><b>'.$tenhh.'</b></h1>
-                <p class="price">'.$dongia.' VNĐ</p>
+                <p class="price">'.number_format($dongia, 0, ',').' VNĐ</p>
                 <div class="rating" style="margin-left: -3px">
                     <div class="stars">
                         <span class="fa fa-star checked"></span>
@@ -145,14 +145,14 @@
                 <p class="description" style="margin-left: 5px">
                    Mô tả : '.$mota.'
                 </p>
-                <div class="row btnaddtocart">
-                <form action="index.php?act=addtocart" method="post">
+                <div class="row btnaddtocart" >
+                <form action="index.php?act=addtocart" method="post" style="display: flex; flex-direction: column;">
                 <input type="hidden" name="id" value="' . $mahh . '">
                 <input type="hidden" name="name" value="' . $tenhh . '">
                 <input type="hidden" name="img" value="' . $hinhanh . '">
                 <input type="hidden" name="price" value="' . $dongia . '"><br>
-
-                <input type="submit" class="btn btn-danger" style="margin-top: -50px; margin-left: 15px;" name="addtocart" value="Mua Ngay">
+                <input type="number" style="margin-top: -50px;  width:50px; margin-left: 15px;" name="soluong" min="1" max="10" value="1"><br>
+                <input type="submit" class="btn btn-danger" style=" margin-left: 15px;" name="addtocart" value="Mua Ngay">
                 </form>
               </div>
             </div>
@@ -188,8 +188,8 @@
                         $hinhanh = $img_path . $hinhanh;
                         echo '<div class="phone-list-item" data-aos="fade-up" data-aos-duration="2000">
                 <a href="'.$linkhh.'"><img src="' . $hinhanh . '" width=" 210px;" height="210px" alt="Điện thoại 3"></a>
-                <div class="name" style="text-align: center;"><a href="#">' . $tenhh . '</a></div>
-                <p>' . $dongia . ' VNĐ</p>
+                <div class="name" style="text-align: center;height: 55px;"><a href="#">' . $tenhh . '</a></div>
+                <p>' . number_format($dongia, 0, ',') . ' VNĐ</p>
                 <div class="row btnaddtocart">
                 <form action="index.php?act=addtocart" method="post">
                 <input type="hidden" name="id" value="' . $mahh . '">

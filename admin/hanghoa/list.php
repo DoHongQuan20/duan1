@@ -3,7 +3,7 @@
   <form action="index.php?act=listhh" method="post">
     <input type="hidden" name="key">
     <select class="option" name="iddm">
-      <option value="0" selected >Tất cả</option>
+      <option value="0" selected>Tất cả</option>
       <?php
       foreach ($listdm as $danhmuc) {
         extract($danhmuc);
@@ -12,10 +12,11 @@
       ?>
     </select>
     <input type="submit" class="nutbtn" name="list" value="Tìm">
+
   </form>
   <table class="table table-hover">
     <tr>
-      
+
       <th>Mã hàng hoá</th>
       <th>Tên hàng hoá</th>
       <th>Đơn giá</th>
@@ -39,7 +40,7 @@
                             
                             <td>' . $mahh . '</td>
                             <td>' . $tenhh . '</td>
-                            <td>' . $dongia . '</td>
+                            <td>' . number_format($dongia, 0, ',') . ' VNĐ</td>
                             <td>' . $hinhanh . '</td>
                             <td>' . $luotxem . '</td>
                             <td><a href ="' . $suahh . '"><input type="button" class="btn btn-success" value="sửa"></a> <a href = "' . $xoahh . '"><input type="button" class="btn btn-danger" value="Xoá"></td>
@@ -51,6 +52,12 @@
   <div>
     <a href="index.php?act=addhh"><input type="button" class="btn btn-primary" value="Thêm hàng hoá"></a>
   </div>
+  <ul class="pagination" style="display: flex;justify-content: center; margin-bottom: 30px; margin-top: 30px;">
+    <?php
+   echo $hienthisotrang ;
+    ?>
+  </ul>
+
 </div>
 </div>
 </div>

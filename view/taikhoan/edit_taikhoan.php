@@ -26,7 +26,7 @@
                     <input type="text" class="form-control hoten" style="width:100%;" name="user" value="<?=$user?>" required>
 
                     <label for="password">Mật khẩu</label>
-                    <input type="password" class="form-control" name="pass" value="<?=$pass?>" required>
+                    <input type="text" class="form-control" style="width:100%;" name="pass" value="Không thể cập nhật mật khẩu ở đây" disabled>
 
                     <label for="email">Email</label>
                     <input type="email" class="form-control" name="email"  value="<?=$email?>" required>

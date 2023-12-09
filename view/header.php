@@ -39,18 +39,18 @@
           <!-- Dropdown list -->
           <ul class="dropdown-list">
             <?php
-            if (!isset($_SESSION['user'])) { ?>
-              <li> <a class="dropdown-item pl-3 py-2" href="index.php?act=dangnhap">Đăng nhập</a></li>
-              <li><a class="dropdown-item pl-3 py-2" href="index.php?act=dangky">Đăng ký</a></li>
-
-            <?php } else { ?>
-              <?php if (isset($_SESSION['user']['role']) == 1) { ?>
+            if (isset($_SESSION['user'])) { ?>
+              
+              <?php if ($_SESSION['user']['role'] == 1) { ?>
                 <li><a class="dropdown-item pl-3 py-2" href="../admin/index.php"> Trang quản trị </a></li>
               <?php } ?>
               <li><a class="dropdown-item pl-3 py-2" href="index.php?act=mybill">Đơn hàng của tôi</a></li>
               <li><a class="dropdown-item pl-3 py-2" href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a></li>
               <li><a class="dropdown-item pl-3 py-2" href="index.php?act=doimk">Đổi mật khẩu</a></li>
               <li><a class="dropdown-item pl-3 py-2" href="../index.php?act=thoat">Đăng xuất</a></li>
+            <?php } else { ?>
+              <li> <a class="dropdown-item pl-3 py-2" href="index.php?act=dangnhap">Đăng nhập</a></li>
+              <li><a class="dropdown-item pl-3 py-2" href="index.php?act=dangky">Đăng ký</a></li>
             <?php } ?>
 
 

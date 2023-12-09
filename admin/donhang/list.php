@@ -21,10 +21,10 @@
             $countsp = loadall_cart_count($bill["id"]);
             echo '<tr>
 
-<td>DAN-' . $bill["id"] . '</td>
+<td>DH-' . $bill["id"] . '</td>
 <td>' . $bill["bill_name"] . '</td>
 <td>' . $countsp . '</td>
-<td><strong>' . $bill["total"] . ' </strong>VND</td>
+<td><strong>' . number_format($bill["total"] , 0, ','). ' </strong>VND</td>
 <td>' . $tthd . '</td>
 
 </tr>';

@@ -5,22 +5,22 @@ function viewcart($del)
     global $img_patth;
     $i = 0;
     if ($del == 1) {
-        $xoasp_th = '<th>Thao tác</th>';
+        $xoasp_th = '<h5>Thao tác</h5>';
         $xoasp_td2 = '<td></td>';
     } else {
         $xoasp_th = '';
         $xoasp_td2 = '';
     }
     echo ' <tr>
-    <th style="width:50% ">
+    <th style="width:45% ">
         <h5>Tên sản phẩm</h5>
     </th>
-    <th style="width:10%">
+    <th style="width:14%">
         <h5>Giá</h5>
     </th>
-    <th style="width:14%"><h5>Số lượng</h5></th>
+    <th style="width:12%"><h5>Số lượng</h5></th>
     <th style="width:18%" class="text-center"><h5>Thành tiền</h5></th>
-    <th style="width:14%">' . $xoasp_th . ' </th>
+    <th style="width:18%">' . $xoasp_th . ' </th>
 </tr>';
     $tong = 0;
     // var_dump($_SESSION['mycart']);
@@ -30,7 +30,7 @@ function viewcart($del)
         $tong += $ttien;
 
         if ($del == 1) {
-            $xoasp_td = '<td><a  href="index.php?act=delcart&idcart=' . $i . '"><input style="margin-top: 30px;" type="button" class="btn btn-danger"  value="xóa"></a></td>';
+            $xoasp_td = '<a  href="index.php?act=delcart&idcart=' . $i . '"><input style="margin-top: 30px;" type="button" class="btn btn-danger"  value="xóa"></a>';
         } else {
 
             $xoasp_td = '';
@@ -50,13 +50,13 @@ function viewcart($del)
                 </div>
             </td>
             <td data-th="Price">
-                <p style="margin-top: 30px;">' . $cart[3] . '</p>
+                <p style="margin-top: 30px;">' .number_format($cart[3], 0, ',').'đ</p>
             </td>
             <td data-th="Quantity">
             <p style="margin-top: 30px;">' . $cart[4] . '</p>
             </td>
             <td data-th="Subtotal" class="text-center">
-                <p style="margin-top: 30px;">' . $ttien . ' VNĐ</p>
+                <p style="margin-top: 30px;">' .number_format($ttien , 0, ',').'đ</p>
             </td>
             <td class="actions" data-th="">
                 ' . $xoasp_td . '
@@ -69,7 +69,7 @@ function viewcart($del)
     echo '<tr>
     <td  colspan="3"><b>Tổng đơn hàng</b></td>
   
-    <td colspan="3" ><b>' . $tong . ' VNĐ</b></td>
+    <td colspan="3" ><b>' .number_format($tong  , 0, ','). ' VNĐ</b></td>
    ' . $xoasp_td2 . '
   <td></td>
 </tr>';
@@ -169,7 +169,7 @@ function loadall_cart($idbill)
 }
 function loadall_cart_count($idbill)
 {
-    $sql = "select * from chitietdonhang where idbill=" . $idbill;
+    $sql = "select * from chitietdonhang where soluong and idbill=" . $idbill;
     $bill = pdo_query($sql);
     return sizeof($bill);
 }

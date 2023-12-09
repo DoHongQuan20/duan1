@@ -1,569 +1,576 @@
-            * {
-                padding: 5px;
-            }
-            
-            .header {
-                display: flex;
-                align-items: center;
-                margin-left: 120px;
-            }
-            
-            .logo {
-                display: flex;
-                align-items: center;
-            }
-            
-            .logo img {
-                padding: 10px;
-                margin-right: 30px;
-                width: 200px;
-                /* Để tạo khoảng cách giữa ảnh và input */
-            }
-            
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-            }
-            
-            .search-container {
-                display: flex;
-                justify-content: center;
-                margin-top: 10px;
-                margin-left: 100px;
-            }
-            
-            input[type="text"] {
-                padding: 8px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                width: 300px;
-                margin-right: 5px;
-            }
-            
-            button {
-                padding: 8px 20px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                background-color: #f0f0f0;
-                color: #333;
-                cursor: pointer;
-            }
-            /* Thiết kế cho menu tài khoản */
-            
-            .taikhoan {
-                text-align: right;
-                /* Canh phải */
-                margin-left: 60px;
-                margin-top: 20px;
-            }
-            
-            .taikhoan ul {
-                list-style: none;
-                /* Ẩn dấu đầu dòng */
-                padding: 0;
-                margin: 0;
-                font-size: 15px;
-            }
-            
-            .taikhoan ul li {
-                display: inline;
-                margin-right: 0px;
-                /* Khoảng cách giữa mỗi mục */
-                border-right: 1px solid #ccc;
-                /* Đường gạch ngăn */
-                padding-right: 20px;
-                /* Khoảng cách giữa chữ và đường gạch ngăn */
-            }
-            
-            .taikhoan ul li:last-child {
-                border-right: none;
-                margin-right: 5px;
-                /* Loại bỏ đường gạch ngăn ở mục cuối cùng */
-            }
-            
-            .taikhoan ul li :hover {
-                color: red;
-            }
-            
-            .taikhoan ul li {
-                display: inline;
-                /* Hiển thị trên cùng một hàng */
-                margin: 7px;
-                /* Khoảng cách giữa các mục */
-            }
-            
-            .taikhoan ul li a {
-                text-decoration: none;
-                /* Loại bỏ gạch chân mặc định trên liên kết */
-                color: #333;
-                /* Màu chữ */
-                padding: 1px;
-                /* Kích thước và khoảng cách trong mục */
-            }
-            /* dangnhap */
-            
-            .icontext {
-                display: flex;
-                margin-left: 80px;
-            }
-            
-            .icontext .text {
-                display: flex;
-                margin-left: 50px;
-                margin-top: -50px;
-            }
-            
-            .dropdown {
-                position: relative;
-                display: inline-block;
-                margin-top: 5px;
-            }
-            
-            .dropdown-select {
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-            }
-            
-            .dropdown-list {
-                position: absolute;
-                display: none;
-                margin: 0;
-                padding: 0;
-                list-style: none;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                overflow: hidden;
-                z-index: 1;
-                background-color: #ffffff;
-                color: #151103;
-            }
-            
-            .dropdown-list li {
-                padding: 10px;
-                cursor: pointer;
-            }
-            
-            .dropdown-list :hover {
-                background-color: #bf2828;
-                color: #ffffff;
-            }
-            /* Hiển thị danh sách khi hover hoặc focus */
-            
-            .dropdown:hover .dropdown-list {
-                display: block;
-            }
-            
-            .footer {
-                margin-left: 100px;
-            }
-            
-            .footer h5 {
-                color: black;
-            }
-            
-            .footer a {
-                color: black;
-                font-size: 13px;
-            }
-            
-            .container {
-                display: flex;
-            }
-            
-            .text>a :hover {
-                text-decoration: none;
-                color: #bf2828;
-            }
-            
-            .left-boxes,
-            .right-boxes {
-                display: flex;
-                flex-direction: column;
-                margin-top: -20px;
-            }
-            
-            .left-boxes {
-                margin-left: -70px;
-            }
-            
-            .box {
-                width: 50px;
-                height: 50px;
-                background-color: #3498db;
-                margin: 5px;
-            }
-            
-            .right-boxes ul {
-                display: flex;
-                /* Sử dụng Flexbox để xếp các mục danh sách theo hàng ngang */
-                list-style: none;
-                /* Ẩn dấu đầu dòng (bullet) của danh sách */
-                padding: 0;
-                margin-left: 120px;
-            }
-            
-            .right-boxes ul :hover {
-                color: red;
-                font-size: 15px;
-            }
-            
-            .right-boxes li {
-                margin-right: 20px;
-                /* Khoảng cách giữa các mục danh sách */
-            }
-            
-            .right-boxes a {
-                text-decoration: none;
-                /* Ẩn gạch chân (underline) của liên kết */
-                color: #000;
-                /* Màu chữ đen */
-            }
-            
-            .left-boxes {
-                padding: 20px;
-            }
-            
-            .left-boxes ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                display: flex;
-                margin-top: -16px;
-                background-color: rgb(219, 52, 52);
-            }
-            
-            .left-boxes li {
-                margin-right: 20px;
-            }
-            
-            .horizontal-line {
-                border-top: 1px solid #000;
-                width: 100%;
-                margin-top: -25px;
-            }
-            
-            .left-boxes a {
-                text-decoration: none;
-                color: #000;
-            }
-            
-            .list-group-item {
-                width: 250px;
-                margin-left: -16px;
-            }
-            
-            .list-group-item a {
-                text-decoration: none;
-                color: #000;
-            }
-            
-            .list-group-item a:hover {
-                color: red;
-            }
-            
-            .list-group {
-                margin-left: 34px;
-                text-align: center;
-            }
-            
-            .list-group:hover {
-                color: red;
-            }
-            
-            .controls {
-                margin-top: -40px;
-            }
-            
-            .top-content {
-                margin-left: 0px;
-                width: 80%;
-                margin-top: -20px;
-            }
-            
-            .carousel-inner .carousel-inner img {
-                width: 100%;
-                height: auto;
-                transform: perspective(1.1);
-            }
-            
-            .row.sp {
-                display: flex;
-                margin: 10px;
-                margin-left: 60px;
-            }
-            
-            .boxsp {
-                background-color: #fff;
-                box-shadow: 3px 3px 6px rgb(171, 171, 171);
-                border-radius: 5px;
-                overflow: hidden;
-                transition: transform 0.3s, box-shadow 0.3s;
-                margin-left: 20px;
-                border: 1px rgb(205, 205, 205) solid;
-                width: 240px;
-                position: relative;
-                height: 380px;
-                max-height: fit-content;
-            }
-            
-            .boxsp img {
-                width: 200px;
-                height: 200px;
-                display: block;
-                transition: transform 0.5s;
-                transform: scale(1);
-                margin: auto;
-            }
-            
-            .boxsp:hover img {
-                transform: scale(1.1);
-            }
-            
-            .boxsp input[type="submit"] {
-                position: absolute;
-                border-radius: 30px;
-                height: 30px;
-                font-size: small;
-                background-color: #ffffff;
-                color: rgb(0, 136, 255);
-                margin-left: 72px;
-                margin-top: -35px;
-                border: 1px rgb(0, 136, 255) solid;
-            }
-            
-            .boxsp input[type="submit"]:hover {
-                color: #ffffff;
-                background-color: rgb(74, 163, 240);
-            }
-            /* Đặt thuộc tính khi di chuột qua */
-            
-            .boxsp p,
-            .boxsp a {
-                text-align: center;
-            }
-            
-            .boxsp .name {
-                text-align: center;
-            }
-            
-            .name a {
-                color: red;
-                font-size: medium;
-            }
-            
-            .name a:hover {
-                color: rgb(158, 26, 26);
-                text-decoration: none;
-            }
-            
-            .thanhg {
-                width: 100%;
-                background-color: #f0f0f0;
-                justify-content: space-between;
-            }
-            
-            .thanhg a {
-                margin-left: 10px;
-            }
-            
-            .only {
-                margin-left: 740px;
-                margin-top: -430px;
-            }
-            
-            .only img {
-                height: 200px;
-                width: 280px;
-            }
-            
-            .styled-text {
-                font-family: 'Arial', sans-serif;
-                /* Thay đổi font chữ */
-                font-size: 2em;
-                /* Kích thước chữ to hơn */
-                color: #100908;
-                /* Màu đỏ đậm */
-                text-transform: uppercase;
-                /* Chuyển đổi chữ thành in hoa */
-                letter-spacing: 5px;
-                /* Khoảng cách giữa các chữ cái */
-                background-image: linear-gradient(45deg, #151103, #423d3d);
-                /* Nền gradient màu vàng nhạt */
-                -webkit-background-clip: text;
-                /* Hiển thị gradient nền trong vùng chữ */
-                color: transparent;
-                /* Ẩn chữ ban đầu */
-                animation: glowing 3s linear infinite;
-                /* Tạo hiệu ứng nhấp nháy */
-            }
-            
-            .tieude {
-                width: 300px;
-                margin-left: 80px;
-            }
-            
-            .hnh {
-                margin-left: 65px;
-            }
-            
-            .hnh2 {
-                margin-left: -100px;
-            }
-            
-            td {
-                vertical-align: middle;
-            }
-            /*giỏ hàng*/
-            
-            @media screen and (max-width: 600px) {
-                table#cart tbody td .form-control {
-                    width: 20%;
-                    display: inline !important;
+                * {
+                    padding: 5px;
                 }
-                .actions .btn {
-                    width: 36%;
-                    margin: 1.5em 0;
+                
+                .header {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 120px;
                 }
-                .actions .btn-info {
-                    float: left;
+                
+                .logo {
+                    display: flex;
+                    align-items: center;
                 }
-                .actions .btn-danger {
-                    float: right;
+                
+                .logo img {
+                    padding: 10px;
+                    margin-right: 30px;
+                    width: 200px;
+                    /* Để tạo khoảng cách giữa ảnh và input */
                 }
-                table#cart thead {
-                    display: none;
+                
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
                 }
-                table#cart tbody td {
-                    display: block;
-                    padding: .6rem;
-                    min-width: 320px;
+                
+                .search-container {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 10px;
+                    margin-left: 100px;
                 }
-                table#cart tbody tr td:first-child {
-                    background: #333;
-                    color: #fff;
+                
+                input[type="text"] {
+                    padding: 8px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    width: 300px;
+                    margin-right: 5px;
                 }
-                table#cart tbody td:before {
-                    content: attr(data-th);
-                    font-weight: bold;
+                
+                button {
+                    padding: 8px 20px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    background-color: #f0f0f0;
+                    color: #333;
+                    cursor: pointer;
+                }
+                /* Thiết kế cho menu tài khoản */
+                
+                .taikhoan {
+                    text-align: right;
+                    /* Canh phải */
+                    margin-left: 60px;
+                    margin-top: 20px;
+                }
+                
+                .taikhoan ul {
+                    list-style: none;
+                    /* Ẩn dấu đầu dòng */
+                    padding: 0;
+                    margin: 0;
+                    font-size: 15px;
+                }
+                
+                .taikhoan ul li {
+                    display: inline;
+                    margin-right: 0px;
+                    /* Khoảng cách giữa mỗi mục */
+                    border-right: 1px solid #ccc;
+                    /* Đường gạch ngăn */
+                    padding-right: 20px;
+                    /* Khoảng cách giữa chữ và đường gạch ngăn */
+                }
+                
+                .taikhoan ul li:last-child {
+                    border-right: none;
+                    margin-right: 5px;
+                    /* Loại bỏ đường gạch ngăn ở mục cuối cùng */
+                }
+                
+                .taikhoan ul li :hover {
+                    color: red;
+                }
+                
+                .taikhoan ul li {
+                    display: inline;
+                    /* Hiển thị trên cùng một hàng */
+                    margin: 7px;
+                    /* Khoảng cách giữa các mục */
+                }
+                
+                .taikhoan ul li a {
+                    text-decoration: none;
+                    /* Loại bỏ gạch chân mặc định trên liên kết */
+                    color: #333;
+                    /* Màu chữ */
+                    padding: 1px;
+                    /* Kích thước và khoảng cách trong mục */
+                }
+                /* dangnhap */
+                
+                .icontext {
+                    display: flex;
+                    margin-left: 80px;
+                }
+                
+                .icontext .text {
+                    display: flex;
+                    margin-left: 50px;
+                    margin-top: -50px;
+                }
+                
+                .dropdown {
+                    position: relative;
                     display: inline-block;
-                    width: 8rem;
+                    margin-top: 5px;
                 }
-                table#cart tfoot td {
+                
+                .dropdown-select {
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                }
+                
+                .dropdown-list {
+                    position: absolute;
+                    display: none;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    overflow: hidden;
+                    z-index: 1;
+                    background-color: #ffffff;
+                    color: #151103;
+                }
+                
+                .dropdown-list li {
+                    padding: 10px;
+                    cursor: pointer;
+                }
+                
+                .dropdown-list :hover {
+                    background-color: #bf2828;
+                    color: #ffffff;
+                }
+                /* Hiển thị danh sách khi hover hoặc focus */
+                
+                .dropdown:hover .dropdown-list {
                     display: block;
                 }
-                table#cart tfoot td .btn {
-                    display: block;
+                
+                .footer {
+                    margin-left: 100px;
                 }
-            }
-            /* footer-footer */
-            
-            .footer-footer {
-                margin-left: 80px;
-            }
-            
-            .dcv img {
-                width: 100px;
-                border-radius: 40px;
-            }
-            
-            .dcv {
-                display: flex;
-            }
-            
-            .thongtin {
-                margin-top: 10px;
-            }
-            /*top 10*/
-            
-            .phone-list-container {
-                padding: 0;
-                border: 1px rgb(206, 206, 206) solid;
-                height: 450px;
-                margin-top: 50px;
-                border-radius: 5px;
-            }
-            
-            .phone-list-title {
-                background-color: #DC3545;
-                width: 100%;
-                color: #ffffff;
-                text-align: center;
-                border-top-left-radius: 5px;
-                border-top-right-radius: 5px;
-            }
-            
-            .phone-list-wrapper {
-                position: relative;
-                overflow: hidden;
-            }
-            
-            .phone-list {
-                display: flex;
-                align-items: center;
-                height: 360px;
-                transform: translateX(0);
-                transition: all 1s ease-in-out;
-            }
-            
-            .phone-list-item {
-                margin-right: 10px;
-                position: relative;
-                background-color: #fff;
-                box-shadow: 3px 3px 6px rgb(171, 171, 171);
-                border-radius: 5px;
-                margin-left: 10px;
-                border: 1px rgb(205, 205, 205) solid;
-                width: 300px;
-                height: 350px;
-            }
-            
-            .phone-list-item img {
-                display: grid;
-                transition: transform 0.5s;
-                transform: scale(1);
-                margin: auto;
-                margin-top: -15px;
-            }
-            
-            .phone-list-item:hover img {
-                transform: scale(1.1);
-            }
-            
-            .phone-list-item p {
-                text-align: center;
-                margin-top: -5px;
-            }
-            
-            .phone-list-item .name {
-                margin-top: -10px;
-            }
-            
-            .phone-list-item input[type="submit"] {
-                position: absolute;
-                border-radius: 30px;
-                height: 30px;
-                font-size: small;
-                background-color: #ffffff;
-                color: rgb(0, 136, 255);
-                margin-left: 63px;
-                margin-top: -15px;
-                border: 1px rgb(0, 136, 255) solid;
-            }
-            
-            .phone-list-item input[type="submit"]:hover {
-                color: #ffffff;
-                background-color: rgb(74, 163, 240);
-            }
-            
-            .arrow {
-                font-size: 70px;
-                position: absolute;
-                top: 90px;
-                right: 0;
-                color: lightgray;
-                opacity: 0.5;
-                cursor: pointer;
-            }
+                
+                .footer h5 {
+                    color: black;
+                }
+                
+                .footer a {
+                    color: black;
+                    font-size: 13px;
+                }
+                
+                .container {
+                    display: flex;
+                }
+                
+                .text>a :hover {
+                    text-decoration: none;
+                    color: #bf2828;
+                }
+                
+                .left-boxes,
+                .right-boxes {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: -20px;
+                }
+                
+                .left-boxes {
+                    margin-left: -70px;
+                }
+                
+                .box {
+                    width: 50px;
+                    height: 50px;
+                    background-color: #3498db;
+                    margin: 5px;
+                }
+                
+                .right-boxes ul {
+                    display: flex;
+                    /* Sử dụng Flexbox để xếp các mục danh sách theo hàng ngang */
+                    list-style: none;
+                    /* Ẩn dấu đầu dòng (bullet) của danh sách */
+                    padding: 0;
+                    margin-left: 120px;
+                }
+                
+                .right-boxes ul :hover {
+                    color: red;
+                    font-size: 15px;
+                }
+                
+                .right-boxes li {
+                    margin-right: 20px;
+                    /* Khoảng cách giữa các mục danh sách */
+                }
+                
+                .right-boxes a {
+                    text-decoration: none;
+                    /* Ẩn gạch chân (underline) của liên kết */
+                    color: #000;
+                    /* Màu chữ đen */
+                }
+                
+                .left-boxes {
+                    padding: 20px;
+                }
+                
+                .left-boxes ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    margin-top: -16px;
+                    background-color: rgb(219, 52, 52);
+                }
+                
+                .left-boxes li {
+                    margin-right: 20px;
+                }
+                
+                .horizontal-line {
+                    border-top: 1px solid #000;
+                    width: 100%;
+                    margin-top: -25px;
+                }
+                
+                .left-boxes a {
+                    text-decoration: none;
+                    color: #000;
+                }
+                
+                .list-group-item {
+                    width: 250px;
+                    margin-left: -16px;
+                }
+                
+                .list-group-item a {
+                    text-decoration: none;
+                    color: #000;
+                }
+                
+                .list-group-item a:hover {
+                    color: red;
+                }
+                
+                .list-group {
+                    margin-left: 34px;
+                    text-align: center;
+                }
+                
+                .list-group:hover {
+                    color: red;
+                }
+                
+                .controls {
+                    margin-top: -40px;
+                }
+                
+                .top-content {
+                    margin-left: 0px;
+                    width: 80%;
+                    margin-top: -20px;
+                }
+                
+                .carousel-inner .carousel-inner img {
+                    width: 100%;
+                    height: auto;
+                    transform: perspective(1.1);
+                }
+                
+                .row.sp {
+                    display: flex;
+                    margin: 10px;
+                    margin-left: 60px;
+                }
+                
+                .boxsp {
+                    background-color: #fff;
+                    box-shadow: 3px 3px 6px rgb(171, 171, 171);
+                    border-radius: 5px;
+                    overflow: hidden;
+                    transition: transform 0.3s, box-shadow 0.3s;
+                    margin-left: 20px;
+                    border: 1px rgb(205, 205, 205) solid;
+                    width: 240px;
+                    position: relative;
+                    height: 380px;
+                    max-height: fit-content;
+                }
+                
+                .boxsp img {
+                    width: 200px;
+                    height: 200px;
+                    display: block;
+                    transition: transform 0.5s;
+                    transform: scale(1);
+                    margin: auto;
+                }
+                
+                .boxsp:hover img {
+                    transform: scale(1.1);
+                }
+                
+                .boxsp input[type="submit"] {
+                    position: absolute;
+                    border-radius: 30px;
+                    height: 30px;
+                    font-size: small;
+                    background-color: #ffffff;
+                    color: rgb(0, 136, 255);
+                    margin-left: 72px;
+                    margin-top: -35px;
+                    border: 1px rgb(0, 136, 255) solid;
+                }
+                
+                .boxsp input[type="submit"]:hover {
+                    color: #ffffff;
+                    background-color: rgb(74, 163, 240);
+                }
+                /* Đặt thuộc tính khi di chuột qua */
+                
+                .boxsp p,
+                .boxsp a {
+                    text-align: center;
+                }
+                
+                .boxsp p {
+                    color: #000;
+                    font-size: large;
+                }
+                
+                .boxsp .name {
+                    text-align: center;
+                    height: 42px;
+                }
+                
+                .name a {
+                    color: red;
+                    font-size: large;
+                }
+                
+                .name a:hover {
+                    color: rgb(158, 26, 26);
+                    text-decoration: none;
+                }
+                
+                .thanhg {
+                    width: 100%;
+                    background-color: #f0f0f0;
+                    justify-content: space-between;
+                }
+                
+                .thanhg a {
+                    margin-left: 10px;
+                }
+                
+                .only {
+                    margin-left: 740px;
+                    margin-top: -430px;
+                }
+                
+                .only img {
+                    height: 200px;
+                    width: 280px;
+                }
+                
+                .styled-text {
+                    font-family: 'Arial', sans-serif;
+                    /* Thay đổi font chữ */
+                    font-size: 2em;
+                    /* Kích thước chữ to hơn */
+                    color: #100908;
+                    /* Màu đỏ đậm */
+                    text-transform: uppercase;
+                    /* Chuyển đổi chữ thành in hoa */
+                    letter-spacing: 5px;
+                    /* Khoảng cách giữa các chữ cái */
+                    background-image: linear-gradient(45deg, #151103, #423d3d);
+                    /* Nền gradient màu vàng nhạt */
+                    -webkit-background-clip: text;
+                    /* Hiển thị gradient nền trong vùng chữ */
+                    color: transparent;
+                    /* Ẩn chữ ban đầu */
+                    animation: glowing 3s linear infinite;
+                    /* Tạo hiệu ứng nhấp nháy */
+                }
+                
+                .tieude {
+                    width: 300px;
+                    margin-left: 80px;
+                }
+                
+                .hnh {
+                    margin-left: 65px;
+                }
+                
+                .hnh2 {
+                    margin-left: -100px;
+                }
+                
+                td {
+                    vertical-align: middle;
+                }
+                /*giỏ hàng*/
+                
+                @media screen and (max-width: 600px) {
+                    table#cart tbody td .form-control {
+                        width: 20%;
+                        display: inline !important;
+                    }
+                    .actions .btn {
+                        width: 36%;
+                        margin: 1.5em 0;
+                    }
+                    .actions .btn-info {
+                        float: left;
+                    }
+                    .actions .btn-danger {
+                        float: right;
+                    }
+                    table#cart thead {
+                        display: none;
+                    }
+                    table#cart tbody td {
+                        display: block;
+                        padding: .6rem;
+                        min-width: 320px;
+                    }
+                    table#cart tbody tr td:first-child {
+                        background: #333;
+                        color: #fff;
+                    }
+                    table#cart tbody td:before {
+                        content: attr(data-th);
+                        font-weight: bold;
+                        display: inline-block;
+                        width: 8rem;
+                    }
+                    table#cart tfoot td {
+                        display: block;
+                    }
+                    table#cart tfoot td .btn {
+                        display: block;
+                    }
+                }
+                /* footer-footer */
+                
+                .footer-footer {
+                    margin-left: 80px;
+                }
+                
+                .dcv img {
+                    width: 100px;
+                    border-radius: 40px;
+                }
+                
+                .dcv {
+                    display: flex;
+                }
+                
+                .thongtin {
+                    margin-top: 10px;
+                }
+                /*top 10*/
+                
+                .phone-list-container {
+                    padding: 0;
+                    border: 1px rgb(206, 206, 206) solid;
+                    height: 470px;
+                    margin-top: 50px;
+                    border-radius: 5px;
+                }
+                
+                .phone-list-title {
+                    background-color: #DC3545;
+                    width: 100%;
+                    color: #ffffff;
+                    text-align: center;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                }
+                
+                .phone-list-wrapper {
+                    position: relative;
+                    overflow: hidden;
+                }
+                
+                .phone-list {
+                    display: flex;
+                    align-items: center;
+                    height: 400px;
+                    transform: translateX(0);
+                    transition: all 1s ease-in-out;
+                }
+                
+                .phone-list-item {
+                    margin-right: 10px;
+                    position: relative;
+                    background-color: #fff;
+                    box-shadow: 3px 3px 6px rgb(171, 171, 171);
+                    border-radius: 5px;
+                    margin-left: 10px;
+                    border: 1px rgb(205, 205, 205) solid;
+                    width: 300px;
+                    height: 370px;
+                }
+                
+                .phone-list-item img {
+                    display: grid;
+                    transition: transform 0.5s;
+                    transform: scale(1);
+                    margin: auto;
+                    margin-top: -15px;
+                }
+                
+                .phone-list-item:hover img {
+                    transform: scale(1.1);
+                }
+                
+                .phone-list-item p {
+                    text-align: center;
+                    margin-top: -5px;
+                    font-size: large;
+                }
+                
+                .phone-list-item .name {
+                    margin-top: -10px;
+                }
+                
+                .phone-list-item input[type="submit"] {
+                    position: absolute;
+                    border-radius: 30px;
+                    height: 30px;
+                    font-size: small;
+                    background-color: #ffffff;
+                    color: rgb(0, 136, 255);
+                    margin-left: 63px;
+                    margin-top: -15px;
+                    border: 1px rgb(0, 136, 255) solid;
+                }
+                
+                .phone-list-item input[type="submit"]:hover {
+                    color: #ffffff;
+                    background-color: rgb(74, 163, 240);
+                }
+                
+                .arrow {
+                    font-size: 70px;
+                    position: absolute;
+                    top: 90px;
+                    right: 0;
+                    color: lightgray;
+                    opacity: 0.5;
+                    cursor: pointer;
+                }

@@ -25,7 +25,7 @@ function loadall_hanghoa_home()
     return $listhh;
 }
 
-function loadall_hanghoa($key = "", $iddm = 0)
+function loadall_hanghoa($key = "", $iddm = 0,)
 {
     $sql = "select * from hanghoa where 1";
     // Thêm điều kiện vào câu truy vấn nếu có $key không rỗng
@@ -41,6 +41,55 @@ function loadall_hanghoa($key = "", $iddm = 0)
     $listhh = pdo_query($sql);
     return $listhh;
 }
+function hien_thi_trang($listhh, $slsp)
+{
+    $tongsanpham = count($listhh);
+    $sotrang = ceil($tongsanpham / $slsp);
+    $html_sotrang = "";
+    for ($i = 1; $i <= $sotrang; $i++) {
+        $html_sotrang .= '<li class="page-item"><a class="page-link" href="index.php?act=listhh&page=' . $i . '"> ' . $i . ' </a></li>';
+    }
+    return $html_sotrang;
+}
+
+function hien_thi_trang_san_pham($listhh, $slsp)
+{
+    $tongsanpham = count($listhh);
+    $sotrang = ceil($tongsanpham / $slsp);
+    $html_sotrang = "";
+    for ($i = 1; $i <= $sotrang; $i++) {
+        $html_sotrang .= '<li class="page-item"><a class="page-link" href="index.php?act=sanpham&page=' . $i . '"> ' . $i . ' </a></li>';
+    }
+    return $html_sotrang;
+}
+
+function loadall_hanghoaadmin($key = "", $iddm = 0, $page, $slsp)
+{
+
+    $batdau = ($page - 1) * $slsp;
+    $sql = "SELECT * from hanghoa where 1";
+    // Thêm điều kiện vào câu truy vấn nếu có $key không rỗng
+    if ($key != '') {
+        $sql .= " and tenhh like '%" . $key . "%'";
+        $sql .= "limit " . $batdau . "," . $slsp;
+    }
+    // Thêm điều kiện vào câu truy vấn nếu có $iddm lớn hơn 0
+    if ($iddm > 0) {
+        $sql .= " and iddm ='" . $iddm . "'";
+    }
+    // Sắp xếp kết quả theo cột 'mahh' theo thứ tự giảm dần
+    $sql .= " order by mahh desc";
+    $sql .= " Limit " . $batdau . "," . $slsp;
+    $listhh = pdo_query($sql);
+
+    return $listhh;
+}
+function load_hanghoaall()
+{
+    $sql = "SELECT * from hanghoa order by mahh desc";
+    return pdo_query($sql);
+}
+
 
 function loadone_hanghoa_cungloai($mahh, $iddm)
 {
@@ -52,7 +101,7 @@ function loadone_hanghoa_cungloai($mahh, $iddm)
 function load_ten_danhmuc($iddm)
 {
     if ($iddm > 0) {
-        $sql = "SELECT * FROM danhmuc where madm=".$iddm;
+        $sql = "SELECT * FROM danhmuc where madm=" . $iddm;
         $dm = pdo_query_one($sql);
         extract($dm);
         return $tendm;
