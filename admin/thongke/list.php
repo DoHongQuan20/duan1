@@ -21,10 +21,10 @@
                 '<tr>
                         <td>' . $madm . '</td>
                         <td>' . $tendm . '</td>
-                        <td>' . $counthh . '</td>
-                        <td>' . $mindongia . '</td>
-                        <td>' . $maxdongia . '</td>
-                        <td>' . $avgdongia . '</td>
+                        <td>' . $counthh. '</td>
+                        <td>' . number_format($mindongia, 0, '.') . '</td>
+                        <td>' . number_format($maxdongia, 0, '.') . '</td>
+                        <td>' . number_format($avgdongia, 0, '.') . '</td>
                     </tr>';
             }
             ?>

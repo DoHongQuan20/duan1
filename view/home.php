@@ -84,7 +84,7 @@
                 <input type="hidden" name="img" value="' . $hinhanh . '">
                 <input type="hidden" name="price" value="' . $dongia . '"><br>
 
-                <input type="submit" style="margin-top: -70px; margin-left: 80px;" name="addtocart" value="Mua ngay">
+                <input type="submit" style="margin-top: -70px; margin-left: 82px;" name="addtocart" value="Mua ngay">
                 </form>
 
       </div>

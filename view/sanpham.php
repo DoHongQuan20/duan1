@@ -34,9 +34,9 @@
           $hinhanh = $img_path . $hinhanh;
           echo '
                     
-                <li class="list-group-item" style="display:flex; flex-direction:row">
+                <li class="list-group-item"style="display:flex; flex-direction:row" >
                 <a href="' . $link_hh . '"><img src="' . $hinhanh . '" width=" 50px;" height="50px" alt="Điện thoại 3"></a>
-                <div><a href="' . $link_hh . '">' . $tenhh . '</a></div>
+                <a href="' . $link_hh . '">' . $tenhh . '</a>
                 </li>';
         }
         ?>
@@ -73,14 +73,14 @@
     </div>';
         }
         ?>
-        
+
 
       </div>
     </div>
-    <ul class="pagination" style="justify-content: center; margin-bottom: 30px; margin-top: 30px;">
-          <?php
-          echo $hienthisotrang;
-          ?>
-        </ul>
+    <ul class="pagination" style="justify-content: center; margin-top: 30px;">
+      <?php
+      echo $hienthisotrang;
+      ?>
+    </ul>
   </div>
 </div>

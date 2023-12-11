@@ -29,7 +29,7 @@
             line-height: 1.6;
             display: flex;
             flex-direction: row;
-            height: 500px;
+            height: 510px;
         }
 
         .product-image img {
@@ -180,7 +180,7 @@
         <div class="phone-list-container" style="height: 480px;">
             <h1 class="phone-list-title" style=" height:58px ;">Sản phẩm tương tự</h1>
             <div class="phone-list-wrapper">
-                <div class="phone-list" style=" height: 420px;">
+                <div class="phone-list" style=" height: 420px;  margin-top: -12px;">
                     <?php
                     foreach ($hh_cung_loai as $hh_cung_loai) {
                         extract($hh_cung_loai);
