@@ -13,7 +13,7 @@
         <?php
         foreach ($ds_dm as $dm) {
           extract($dm);
-          $link_dm = "index.php?act=hanghoa2&iddm=" . $madm;
+          $link_dm = "index.php?act=hanghoa&iddm=" . $madm;
           echo '<li class="list-group-item"><a  href="' . $link_dm . '">' . $tendm . '</a></li>';
         }
         ?>

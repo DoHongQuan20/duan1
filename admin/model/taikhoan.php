@@ -27,9 +27,9 @@ function update_pass($id,$pass)
     $sql = "UPDATE taikhoan SET pass= '$pass' where id ='$id'";
     pdo_execute($sql);
 }
-function update_taikhoan($id, $user, $pass,$name, $email, $address, $tel)
+function update_taikhoan($id, $user,$name, $email, $address, $tel)
 {
-    $sql = "UPDATE taikhoan SET user ='$user',pass= '$pass',name='$name',email = '$email',address='$address',tel='$tel' where id ='$id'";
+    $sql = "UPDATE taikhoan SET user ='$user',name='$name',email = '$email',address='$address',tel='$tel' where id ='$id'";
     pdo_execute($sql);
 }
 

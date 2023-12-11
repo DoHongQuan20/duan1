@@ -10,7 +10,6 @@ if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
         case 'adddm':
-            $thongbao = "";
             if (isset($_POST['them'])) {
                 $tendm = $_POST['tendm'];
                 if ($_POST['tendm'] == "") {

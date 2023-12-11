@@ -20,14 +20,14 @@ function loadall_hanghoa_top10()
 
 function loadall_hanghoa_home()
 {
-    $sql = "SELECT * from hanghoa where 1 order by mahh desc limit 10";
+    $sql = "SELECT * FROM hanghoa ORDER BY mahh DESC LIMIT 0,10";
     $listhh = pdo_query($sql);
     return $listhh;
 }
 
 function loadall_hanghoa($key = "", $iddm = 0,)
 {
-    $sql = "select * from hanghoa where 1";
+    $sql = "select * from hanghoa ";
     // Thêm điều kiện vào câu truy vấn nếu có $key không rỗng
     if ($key != '') {
         $sql .= " and tenhh like '%" . $key . "%'";
@@ -71,7 +71,7 @@ function loadall_hanghoaadmin($key = "", $iddm = 0, $page, $slsp)
     // Thêm điều kiện vào câu truy vấn nếu có $key không rỗng
     if ($key != '') {
         $sql .= " and tenhh like '%" . $key . "%'";
-        $sql .= "limit " . $batdau . "," . $slsp;
+        
     }
     // Thêm điều kiện vào câu truy vấn nếu có $iddm lớn hơn 0
     if ($iddm > 0) {
@@ -112,7 +112,7 @@ function load_ten_danhmuc($iddm)
 
 function loadone_hanghoa($mahh)
 {
-    $sql = "SELECT * FROM hanghoa where mahh=" . $mahh;
+    $sql = "SELECT * FROM hanghoa where mahh=".$mahh;
     $hh = pdo_query_one($sql);
     return $hh;
 }

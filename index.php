@@ -10,8 +10,8 @@ include "view/header.php";
 include "global.php";
 
 if (!isset($_SESSION['mycart'])) $_SESSION['mycart'] = [];
-
-if (isset($_POST['key']) && ($_POST['key']) != "") {
+//phan trang
+if (isset($_POST['key'])) {
     $key = $_POST['key'];
 } else {
     $key = "";
@@ -27,18 +27,18 @@ if (!isset($_GET['page'])) {
     $page = (int)$_GET['page'];
 }
 $slsp = 12;
-$slsp_home = 10;
-
 $hang_hoa = loadall_hanghoaadmin($key, $iddm, $page, $slsp);
 $tongsosp = load_hanghoaall();
 $hienthisotrang = hien_thi_trang_san_pham($tongsosp, $slsp);
-
+//hiển thị danh mục sp
 $ds_dm = loadall_danhmuc();
+//hiển thị sản phẩm
 $hanghoa_new = loadall_hanghoa_home();
+//hiển thị top10
 $ds_top10 = loadall_hanghoa_top10();
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
-    switch ($act) {
+    switch ($act) {        
         case 'hanghoa':
             if (isset($_POST['key']) && ($_POST['key']) != "") {
                 $key = $_POST['key'];
@@ -53,21 +53,6 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $ds_hh = loadall_hanghoa($key, $iddm);
             $tendm = load_ten_danhmuc($iddm);
             include "view/hanghoa.php";
-            break;
-        case 'hanghoa2':
-            if (isset($_POST['key']) && ($_POST['key']) != "") {
-                $key = $_POST['key'];
-            } else {
-                $key = "";
-            }
-            if (isset($_GET['iddm']) && ($_GET['iddm']) > 0) {
-                $iddm = $_GET['iddm'];
-            } else {
-                $iddm = 0;
-            }
-            $ds_hh = loadall_hanghoa($key, $iddm);
-            $tendm = load_ten_danhmuc($iddm);
-            include "view/hanghoa2.php";
             break;
         case 'gioithieu':
             include "view/gioithieu.php";
@@ -135,15 +120,13 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'edit_taikhoan':
             if (isset($_POST['capnhat'])) {
                 $user = $_POST['user'];
-                $pass = $_POST['pass'];
                 $name = $_POST['name'];
                 $email = $_POST['email'];
                 $adress = $_POST['address'];
                 $tel = $_POST['tel'];
                 $id = $_POST['id'];
-                update_taikhoan($id, $user, $pass, $name, $email, $adress, $tel);
-                $_SESSION['user'] = checkuser($user, $pass);
-
+                update_taikhoan($id, $user, $name, $email, $adress, $tel);
+            
                 $thongbao = "Cập nhật tài khoản thành công";
             }
             include "view/taikhoan/edit_taikhoan.php";
